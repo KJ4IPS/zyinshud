@@ -47,7 +47,7 @@ import com.zyin.zyinhud.mods.Miscellaneous;
 //import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
-//import com.zyin.zyinhud.mods.SafeOverlay;
+import com.zyin.zyinhud.mods.SafeOverlay;
 //import com.zyin.zyinhud.mods.TorchAid;
 //import com.zyin.zyinhud.mods.WeaponSwapper;
 import com.zyin.zyinhud.util.Localization;
@@ -398,12 +398,12 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     }
     private void DrawSafeOverlayButtons()
     {
-//    	AddButtonAt(0, 0, new GuiButton(701, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(SafeOverlay.Enabled)));
-//    	AddButtonAt(0, 1, new GuiHotkeyButton(702, 0, 0, buttonWidth, buttonHeight, SafeOverlayKeyHandler.HotkeyDescription));
-//    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(703, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.drawdistance"), SafeOverlay.minDrawDistance, SafeOverlay.maxDrawDistance, SafeOverlay.instance.GetDrawDistance(), SafeOverlay.defaultDrawDistance, GuiNumberSlider.Modes.INTEGER));
-//    	AddButtonAt(0, 3, new GuiNumberSliderWithUndo(704, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.transparency"), SafeOverlay.instance.GetUnsafeOverlayMinTransparency(), SafeOverlay.instance.GetUnsafeOverlayMaxTransparency(), SafeOverlay.instance.GetUnsafeOverlayTransparency(), 0.3f, GuiNumberSlider.Modes.PERCENT));
-//    	AddButtonAt(0, 4, new GuiButton(705, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether())));
-//    	AddButtonAt(0, 5, new GuiButton(706, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls())));
+    	AddButtonAt(0, 0, new GuiButton(701, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(SafeOverlay.Enabled)));
+    	AddButtonAt(0, 1, new GuiHotkeyButton(702, 0, 0, buttonWidth, buttonHeight, SafeOverlayKeyHandler.HotkeyDescription));
+    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(703, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.drawdistance"), SafeOverlay.minDrawDistance, SafeOverlay.maxDrawDistance, SafeOverlay.instance.GetDrawDistance(), SafeOverlay.defaultDrawDistance, GuiNumberSlider.Modes.INTEGER));
+    	AddButtonAt(0, 3, new GuiNumberSliderWithUndo(704, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.transparency"), SafeOverlay.instance.GetUnsafeOverlayMinTransparency(), SafeOverlay.instance.GetUnsafeOverlayMaxTransparency(), SafeOverlay.instance.GetUnsafeOverlayTransparency(), 0.3f, GuiNumberSlider.Modes.PERCENT));
+    	AddButtonAt(0, 4, new GuiButton(705, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether())));
+    	AddButtonAt(0, 5, new GuiButton(706, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls())));
     	
     }
     private void DrawPlayerLocatorButtons()
@@ -806,33 +806,33 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            /////////////////////////////////////////////////////////////////////////
 	            // Safe Overlay
 	            /////////////////////////////////////////////////////////////////////////
-//
-//	            case 700:
-//	            	screenTitle = Localization.get("safeoverlay.name");
-//	            	DrawSafeOverlayButtons();
-//	            	break;
-//	            case 701:	//Enable/Disable
-//	            	SafeOverlay.ToggleEnabled();
-//	            	button.displayString = GetButtonLabel_Enabled(SafeOverlay.Enabled);
-//	            	break;
-//	            case 702:	//Hotkey
-//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-//	            	break;
-//	            case 703:	//Draw distance slider
-//	            	int value = ((GuiNumberSlider)button).GetValueAsInteger();
-//	            	SafeOverlay.instance.SetDrawDistance(value);
-//	            	break;
-//	            case 704:	//Draw distance slider
-//	            	SafeOverlay.instance.SetUnsafeOverlayTransparency(((GuiNumberSlider)button).GetValueAsFloat());
-//	            	break;
-//	            case 705:	//Show in Nether
-//	            	SafeOverlay.instance.ToggleDisplayInNether();
-//	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether());
-//	            	break;
-//	            case 706:	//X-ray
-//	            	SafeOverlay.instance.ToggleSeeUnsafePositionsThroughWalls();
-//	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
-//	            	break;
+
+	            case 700:
+	            	screenTitle = Localization.get("safeoverlay.name");
+	            	DrawSafeOverlayButtons();
+	            	break;
+	            case 701:	//Enable/Disable
+	            	SafeOverlay.ToggleEnabled();
+	            	button.displayString = GetButtonLabel_Enabled(SafeOverlay.Enabled);
+	            	break;
+	            case 702:	//Hotkey
+	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+	            	break;
+	            case 703:	//Draw distance slider
+	            	int value = ((GuiNumberSlider)button).GetValueAsInteger();
+	            	SafeOverlay.instance.SetDrawDistance(value);
+	            	break;
+	            case 704:	//Draw distance slider
+	            	SafeOverlay.instance.SetUnsafeOverlayTransparency(((GuiNumberSlider)button).GetValueAsFloat());
+	            	break;
+	            case 705:	//Show in Nether
+	            	SafeOverlay.instance.ToggleDisplayInNether();
+	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether());
+	            	break;
+	            case 706:	//X-ray
+	            	SafeOverlay.instance.ToggleSeeUnsafePositionsThroughWalls();
+	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
+	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Player Locator
