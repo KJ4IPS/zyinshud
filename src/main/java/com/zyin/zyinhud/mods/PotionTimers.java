@@ -128,7 +128,7 @@ public class PotionTimers extends ZyinHUDModBase
             while (it.hasNext())
             {
                 PotionEffect potionEffect = (PotionEffect)it.next();
-                Potion potion = PotionTypes[potionEffect.getPotionID()];
+                Potion potion = potionEffect.getPotion();
                 Boolean isFromBeacon = potionEffect.getIsAmbient();	//Minecraft bug: this is always false
 
                 if (!isFromBeacon)	//ignore effects from Beacons (Minecraft bug: isFromBeacon is always false)
@@ -165,7 +165,8 @@ public class PotionTimers extends ZyinHUDModBase
      */
 	protected static void DrawPotionDuration(int x, int y, Potion potion, PotionEffect potionEffect)
 	{
-		String durationString = Potion.getDurationString(potionEffect);
+        //TODO Investigate Potion.getPotionDurationString()'s second parameter
+		String durationString = Potion.getPotionDurationString(potionEffect, 1.0f);
 		int potionDuration = potionEffect.getDuration();	//goes down by 20 ticks per second
 		int colorInt;
 
