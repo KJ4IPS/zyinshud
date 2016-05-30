@@ -35,7 +35,7 @@ public class Miscellaneous extends ZyinHUDModBase
     @SubscribeEvent
     public void GuiOpenEvent(GuiOpenEvent event)
 	{
-    	if(UseQuickPlaceSign && event.gui instanceof GuiEditSign && mc.thePlayer.isSneaking())
+    	if(UseQuickPlaceSign && event.getGui() instanceof GuiEditSign && mc.thePlayer.isSneaking())
     	{
     		event.setCanceled(true);
     	}
@@ -45,9 +45,9 @@ public class Miscellaneous extends ZyinHUDModBase
     @SubscribeEvent
     public void DrawScreenEvent(DrawScreenEvent.Post event)
     {
-    	if(ShowAnvilRepairs && event.gui instanceof GuiRepair)
+    	if(ShowAnvilRepairs && event.getGui() instanceof GuiRepair)
     	{
-    		DrawGuiRepairCounts((GuiRepair)event.gui);
+    		DrawGuiRepairCounts((GuiRepair) event.getGui());
     	}
     }
     
