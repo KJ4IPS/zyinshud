@@ -192,7 +192,7 @@ public class PlayerLocator extends ZyinHUDModBase
         		alpha = alpha / 6;
         	}
         	
-        	if(entity.ridingEntity != null)
+        	if(entity.getRidingEntity() != null)
         		overlayMessage = "    " + overlayMessage;	//make room for any icons we render
         	
             int overlayMessageWidth = mc.fontRendererObj.getStringWidth(overlayMessage);	//the width in pixels of the message
@@ -224,10 +224,10 @@ public class PlayerLocator extends ZyinHUDModBase
             mc.fontRendererObj.drawStringWithShadow(overlayMessage, x, y, color);
             
             //also render whatever the player is currently riding on
-            if (entity.ridingEntity instanceof EntityHorse)
+            if (entity.getRidingEntity() instanceof EntityHorse)
             {
             	//armor is 0 when no horse armor is equipped
-            	int armor = ((EntityHorse)entity.ridingEntity).getHorseArmorIndexSynced();
+            	int armor = ((EntityHorse) entity.getRidingEntity()).getHorseArmorIndexSynced();
             	
             	if(armor == 1)
                 	RenderHorseArmorIronIcon(x, y);
@@ -235,18 +235,18 @@ public class PlayerLocator extends ZyinHUDModBase
                 	RenderHorseArmorGoldIcon(x, y);
             	else if(armor == 3)
                 	RenderHorseArmorDiamondIcon(x, y);
-            	else if(((EntityHorse)entity.ridingEntity).isHorseSaddled())
+            	else if(((EntityHorse) entity.getRidingEntity()).isHorseSaddled())
                 	RenderSaddleIcon(x, y);
             }
-            if (entity.ridingEntity instanceof EntityPig)
+            if (entity.getRidingEntity() instanceof EntityPig)
             {
             	RenderSaddleIcon(x, y);
             }
-            else if (entity.ridingEntity instanceof EntityMinecart)
+            else if (entity.getRidingEntity() instanceof EntityMinecart)
             {
             	RenderMinecartIcon(x, y);
             }
-            else if (entity.ridingEntity instanceof EntityBoat)
+            else if (entity.getRidingEntity() instanceof EntityBoat)
             {
             	RenderBoatIcon(x, y);
             }

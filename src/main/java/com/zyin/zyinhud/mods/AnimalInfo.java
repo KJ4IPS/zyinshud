@@ -175,7 +175,7 @@ public class AnimalInfo extends ZyinHUDModBase
         {
             if (mc.thePlayer.isRidingHorse())
             {
-                EntityHorse horse = (EntityHorse) mc.thePlayer.ridingEntity;
+                EntityHorse horse = (EntityHorse) mc.thePlayer.getRidingEntity();
                 String horseSpeedMessage = Localization.get("animalinfo.debug.speed") + " " + GetHorseSpeedText(horse) + " m/s";
                 String horseJumpMessage = Localization.get("animalinfo.debug.jump") + " " + GetHorseJumpText(horse) + " blocks";
                 String horseHPMessage = Localization.get("animalinfo.debug.hp") + " " + GetHorseHPText(horse);
