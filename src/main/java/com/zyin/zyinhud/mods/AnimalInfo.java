@@ -533,7 +533,7 @@ public class AnimalInfo extends ZyinHUDModBase
      */
     private static int GetEntityMaxHP(EntityLivingBase entity)
     {
-        return (int) entity.getEntityAttribute(SharedMonsterAttributes.maxHealth).getAttributeValue();
+        return (int) entity.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).getAttributeValue();
     }
 
     /**
@@ -543,7 +543,7 @@ public class AnimalInfo extends ZyinHUDModBase
      */
     private static int GetEntityMaxHearts(EntityLivingBase entity)
     {
-        return (int) Math.round(entity.getEntityAttribute(SharedMonsterAttributes.maxHealth).getAttributeValue() / 2);
+        return (int) Math.round(entity.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).getAttributeValue() / 2);
     }
 
     /**
@@ -555,7 +555,7 @@ public class AnimalInfo extends ZyinHUDModBase
     {
         //Steve has a movement speed of 0.1 and walks 4.3 blocks per second,
         //so multiply this result by 43 to convert to blocks per second
-        return entity.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue() * 43;
+        return entity.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).getAttributeValue() * 43;
     }
 
     /**
