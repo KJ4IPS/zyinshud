@@ -5,9 +5,11 @@ import java.util.List;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
+import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 
 import com.zyin.zyinhud.gui.GuiZyinHUDOptions;
+import net.minecraft.server.MinecraftServer;
 
 public class CommandZyinHUDOptions extends CommandBase
 {
@@ -38,9 +40,15 @@ public class CommandZyinHUDOptions extends CommandBase
 		return "commands.zyinhudoptions.usage";
 	}
 
-	@Override
+	//@Override
 	public void processCommand(ICommandSender iCommandSender, String[] parameters)
 	{
 		mc.displayGuiScreen(new GuiZyinHUDOptions(null));
+	}
+
+	@Override // ICommand
+	public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException
+	{
+		//TODO Method stub to silence error; needs implementation
 	}
 }
