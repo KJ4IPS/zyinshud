@@ -4,7 +4,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
+import net.minecraft.util.math.BlockPos;
 
 public class ZyinHUDSound
 {
@@ -16,7 +18,7 @@ public class ZyinHUDSound
 	 */
 	public static void PlaySound(String name)
 	{
-		mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("zyinhud:" + name), 1.0F));
+		mc.getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(new SoundEvent(new ResourceLocation("zyinhud:" + name)), 1.0F));
 	}
 	
 	/**
@@ -26,7 +28,9 @@ public class ZyinHUDSound
 	 */
 	public static void PlaySound(String name, float volume)
 	{
-		mc.getSoundHandler().playSound(new PositionedSoundRecord(new ResourceLocation("zyinhud:" + name), volume, 1.0F, (float)mc.thePlayer.posX, (float)mc.thePlayer.posY, (float)mc.thePlayer.posZ));
+		BlockPos playerPosition = mc.thePlayer.getPosition();
+		SoundEvent soundEvent = new SoundEvent(new ResourceLocation("zyinhud:" + name));
+		mc.getSoundHandler().playSound(new PositionedSoundRecord(soundEvent, SoundCategory.MASTER, volume, 1.0F, playerPosition));
 	}
 	
 	/**
