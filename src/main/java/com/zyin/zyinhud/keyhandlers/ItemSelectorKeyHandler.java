@@ -19,7 +19,7 @@ public class ItemSelectorKeyHandler implements ZyinHUDKeyHandlerBase
         if (!mc.inGameHasFocus || !ItemSelector.Enabled)
             return;
         
-        ItemSelector.Scroll(event.dwheel > 0 ? ItemSelector.WHEEL_UP : ItemSelector.WHEEL_DOWN);
+        ItemSelector.Scroll(event.getDwheel() > 0 ? ItemSelector.WHEEL_UP : ItemSelector.WHEEL_DOWN);
         event.setCanceled(true);
     }
 
@@ -28,7 +28,7 @@ public class ItemSelectorKeyHandler implements ZyinHUDKeyHandlerBase
         if (!mc.inGameHasFocus || !ItemSelector.Enabled || !ItemSelector.UseMouseSideButtons)
             return;
 
-        int direction = event.button == 3 ? ItemSelector.WHEEL_UP : ItemSelector.WHEEL_DOWN;
+        int direction = event.getButton() == 3 ? ItemSelector.WHEEL_UP : ItemSelector.WHEEL_DOWN;
 
         ItemSelector.SideButton(direction);
         event.setCanceled(true);
