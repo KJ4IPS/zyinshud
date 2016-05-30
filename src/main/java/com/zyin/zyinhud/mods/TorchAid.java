@@ -7,7 +7,7 @@ import java.awt.Robot;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.math.RayTraceResult;
 
 import com.zyin.zyinhud.util.InventoryUtil;
 import com.zyin.zyinhud.util.ModCompatibility;
@@ -98,7 +98,7 @@ public class TorchAid extends ZyinHUDModBase
             EatingAid.instance.StopEating();    //it's not good if we have a torch selected and hold right click down...
         }
         
-        if (mc.objectMouseOver != null && mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK)
+        if (mc.objectMouseOver != null && mc.objectMouseOver.typeOfHit == RayTraceResult.Type.BLOCK)
         {
             int torchHotbarIndex = InventoryUtil.GetItemIndexFromHotbar(Blocks.torch);
             
