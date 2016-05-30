@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.ISound;
 import net.minecraft.client.audio.PositionedSoundRecord;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 
 public class ZyinHUDSound
 {
@@ -33,7 +34,7 @@ public class ZyinHUDSound
 	 */
 	public static void PlayButtonPress()
 	{
-		mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("gui.button.press"), 1.0F));
+		mc.getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(new SoundEvent(new ResourceLocation("gui.button.press")), 1.0F));
 	}
 	
 	/**
@@ -41,6 +42,6 @@ public class ZyinHUDSound
 	 */
 	public static void PlayPlopSound()
 	{
-		mc.getSoundHandler().playSound(PositionedSoundRecord.create(new ResourceLocation("mob.chicken.plop"), 1.0F));
+		mc.getSoundHandler().playSound(PositionedSoundRecord.getMasterRecord(new SoundEvent(new ResourceLocation("mob.chicken.plop")), 1.0F));
 	}
 }
