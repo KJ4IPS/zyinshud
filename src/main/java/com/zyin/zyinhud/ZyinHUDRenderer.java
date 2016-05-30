@@ -27,7 +27,7 @@ import com.zyin.zyinhud.mods.DurabilityInfo;
 import com.zyin.zyinhud.mods.InfoLine;
 //import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.PotionTimers;
-//import com.zyin.zyinhud.mods.SafeOverlay;
+import com.zyin.zyinhud.mods.SafeOverlay;
 /**
  * This class is in charge of rendering things onto the HUD and into the game world.
  */
@@ -78,7 +78,7 @@ public class ZyinHUDRenderer
     {
         //render unsafe positions (cache calculations are done from this render method)
         //TODO Enable once associated class is functional
-        //SafeOverlay.instance.RenderAllUnsafePositionsMultithreaded(event.getPartialTicks());
+        SafeOverlay.instance.RenderAllUnsafePositionsMultithreaded(event.getPartialTicks());
     	
         //calls other mods that need to render things in the game world nearby other entities
         RenderEntityTrackerHelper.RenderEntityInfo(event.getPartialTicks());
