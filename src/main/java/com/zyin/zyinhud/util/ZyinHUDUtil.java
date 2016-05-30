@@ -20,7 +20,7 @@ import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.util.math.BlockPos;
 //import net.minecraft.util.IIcon;
-import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.math.RayTraceResult;
 
 /**
  * General utility class for ZyinHUD.
@@ -38,7 +38,7 @@ public class ZyinHUDUtil
      */
 	public static boolean IsMouseoveredBlockRightClickable()
 	{
-        if (mc.objectMouseOver != null && mc.objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK)
+        if (mc.objectMouseOver != null && mc.objectMouseOver.typeOfHit == RayTraceResult.Type.BLOCK)
         {
         	Block block = GetMouseOveredBlock();
 

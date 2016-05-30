@@ -4,7 +4,7 @@ import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.math.RayTraceResult;
 
 import com.zyin.zyinhud.util.Localization;
 
@@ -97,9 +97,9 @@ public class DistanceMeasurer extends ZyinHUDModBase
      */
     protected static String CalculateDistanceString()
     {
-    	MovingObjectPosition objectMouseOver = mc.thePlayer.rayTrace(300, 1);
+    	RayTraceResult objectMouseOver = mc.thePlayer.rayTrace(300, 1);
     	
-        if (objectMouseOver != null && objectMouseOver.typeOfHit == MovingObjectPosition.MovingObjectType.BLOCK)
+        if (objectMouseOver != null && objectMouseOver.typeOfHit == RayTraceResult.Type.BLOCK)
         {
             if (Mode == Modes.SIMPLE)
             {
