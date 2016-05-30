@@ -20,7 +20,7 @@ import org.lwjgl.opengl.GL11;
 import com.zyin.zyinhud.ZyinHUDRenderer;
 import com.zyin.zyinhud.ZyinHUDSound;
 import com.zyin.zyinhud.gui.GuiZyinHUDOptions;
-import com.zyin.zyinhud.util.InventoryUtil;
+//import com.zyin.zyinhud.util.InventoryUtil;
 import com.zyin.zyinhud.util.Localization;
 import com.zyin.zyinhud.util.ModCompatibility;
 
@@ -454,7 +454,7 @@ public class DurabilityInfo extends ZyinHUDModBase
                     if (maxDamage != 0 &&
                     		maxDamage - itemDamage < 5)
                     {
-                       InventoryUtil.MoveArmorIntoPlayerInventory(i);
+//                       InventoryUtil.MoveArmorIntoPlayerInventory(i);
 	                   	ZyinHUDSound.PlayPlopSound();
 	                   	ZyinHUDRenderer.DisplayNotification(Localization.get("durabilityinfo.name") + Localization.get("durabilityinfo.unequippeditem") + itemStack.getDisplayName());
 	                   	System.out.println("Unequipped " + itemStack.getDisplayName() + " because it was at low durability (" + itemDamage + "/" + maxDamage + ")");
@@ -489,7 +489,7 @@ public class DurabilityInfo extends ZyinHUDModBase
                     	&& maxDamage - itemDamage < threshold				//less than 15 durability
                     	&& (float)itemDamage / (float)maxDamage > 0.9)		//less than 10%
                     {
-                    	InventoryUtil.MoveHeldItemIntoPlayerInventory();
+//                    	InventoryUtil.MoveHeldItemIntoPlayerInventory();
                     	ZyinHUDSound.PlayPlopSound();
                     	ZyinHUDRenderer.DisplayNotification(Localization.get("durabilityinfo.name") + Localization.get("durabilityinfo.unequippeditem") + item.getItemStackDisplayName(itemStack));
                     	System.out.println("Unequipped " + item.getItemStackDisplayName(itemStack) + " because it was at low durability (" + itemDamage + "/" + maxDamage + ")");
