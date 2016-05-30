@@ -4,7 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiOptions;
 import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.client.event.GuiScreenEvent.ActionPerformedEvent;
 import net.minecraftforge.client.event.GuiScreenEvent.InitGuiEvent;
 
@@ -140,7 +140,7 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     
     private GuiHotkeyButton currentlySelectedHotkeyButton;
     private static GuiButton currentlySelectedTabButton = null;
-    private final String currentlySelectedTabButtonColor = EnumChatFormatting.YELLOW.toString();
+    private final String currentlySelectedTabButtonColor = TextFormatting.YELLOW.toString();
     
     
     //variables influencing the placement/sizing of the tab buttons on the left
@@ -285,7 +285,7 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     	}
     	else if(currentlySelectedTabButton.id == 1600)	//Quick Deposit
     	{
-    		String text = EnumChatFormatting.UNDERLINE + Localization.get("quickdeposit.options.blacklist");
+    		String text = TextFormatting.UNDERLINE + Localization.get("quickdeposit.options.blacklist");
     		
         	int x = tabbedButtonWidth + tabbedButtonX + buttonSpacing*2 + buttonWidth + buttonSpacing*2 + buttonWidth/2 - fontRendererObj.getStringWidth(text)/2;
         	int y = buttonY - buttonHeight/2 - fontRendererObj.FONT_HEIGHT/2 + 3;
@@ -556,9 +556,9 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     private static String GetButtonLabel_Enabled(boolean enabled)
     {
     	if(enabled)
-    		return Localization.get("gui.options.enabled") + EnumChatFormatting.GREEN + Localization.get("options.on") + EnumChatFormatting.WHITE;
+    		return Localization.get("gui.options.enabled") + TextFormatting.GREEN + Localization.get("options.on") + TextFormatting.WHITE;
     	else
-    		return Localization.get("gui.options.enabled") + EnumChatFormatting.RED + Localization.get("options.off") + EnumChatFormatting.WHITE;
+    		return Localization.get("gui.options.enabled") + TextFormatting.RED + Localization.get("options.off") + TextFormatting.WHITE;
     }
     
     /**

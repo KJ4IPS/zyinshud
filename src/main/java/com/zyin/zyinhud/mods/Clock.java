@@ -2,7 +2,7 @@ package com.zyin.zyinhud.mods;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 import org.lwjgl.opengl.GL11;
 
@@ -106,7 +106,7 @@ public class Clock extends ZyinHUDModBase
                 if(IsNight())
         		{
         			//night time
-                    String nighttimeClockString = EnumChatFormatting.GRAY + String.format("%02d", hours) + ":" + String.format("%02d", seconds);
+                    String nighttimeClockString = TextFormatting.GRAY + String.format("%02d", hours) + ":" + String.format("%02d", seconds);
                     return nighttimeClockString;
         		}
                 else
@@ -115,9 +115,9 @@ public class Clock extends ZyinHUDModBase
                     String daytimeClockString = String.format("%02d", hours) + ":" + String.format("%02d", seconds);
 
         			if(time < bedTime)
-        				daytimeClockString = EnumChatFormatting.YELLOW + daytimeClockString;
+        				daytimeClockString = TextFormatting.YELLOW + daytimeClockString;
         			else
-        				daytimeClockString = EnumChatFormatting.GOLD + daytimeClockString;
+        				daytimeClockString = TextFormatting.GOLD + daytimeClockString;
         			
         			return daytimeClockString;
         		}
@@ -134,7 +134,7 @@ public class Clock extends ZyinHUDModBase
         			long minutes = secondsTillDay / 60;
         			long seconds = secondsTillDay - minutes*60;
         			
-                    String nighttimeCountdownString = EnumChatFormatting.GRAY + String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
+                    String nighttimeCountdownString = TextFormatting.GRAY + String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
                     return nighttimeCountdownString;
         		}
         		else
@@ -152,9 +152,9 @@ public class Clock extends ZyinHUDModBase
                     String daytimeCountdownString = String.format("%02d", minutes) + ":" + String.format("%02d", seconds);
                     
         			if(time < bedTime)
-        				daytimeCountdownString = EnumChatFormatting.YELLOW + daytimeCountdownString;
+        				daytimeCountdownString = TextFormatting.YELLOW + daytimeCountdownString;
         			else
-        				daytimeCountdownString = EnumChatFormatting.GOLD + daytimeCountdownString;
+        				daytimeCountdownString = TextFormatting.GOLD + daytimeCountdownString;
         			
         			return daytimeCountdownString;
         		}

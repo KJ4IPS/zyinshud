@@ -17,7 +17,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.scoreboard.ScorePlayerTeam;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
@@ -96,7 +96,7 @@ public class PlayerLocator extends ZyinHUDModBase
     
     private static final String wolfName = Localization.get("entity.Wolf.name");
     private static final String sprintingMessagePrefix = "";
-    private static final String sneakingMessagePrefix = EnumChatFormatting.ITALIC.toString();
+    private static final String sneakingMessagePrefix = TextFormatting.ITALIC.toString();
     private static final String ridingMessagePrefix = "    ";	//space for the saddle/minecart/boat/horse armor icon
 
     /** Don't render players that are closer than this */
@@ -286,7 +286,7 @@ public class PlayerLocator extends ZyinHUDModBase
         //add distance to this wither skeleton into the message
         if (ShowDistanceToPlayers)
         {
-        	overlayMessage = EnumChatFormatting.GRAY + "[" + (int)distanceFromMe + "] " + EnumChatFormatting.RESET + overlayMessage;
+        	overlayMessage = TextFormatting.GRAY + "[" + (int)distanceFromMe + "] " + TextFormatting.RESET + overlayMessage;
         }
         
         return overlayMessage;
@@ -304,7 +304,7 @@ public class PlayerLocator extends ZyinHUDModBase
         //add distance to this wolf into the message
         if (ShowDistanceToPlayers)
         {
-        	overlayMessage = EnumChatFormatting.GRAY + "[" + (int)distanceFromMe + "] " + EnumChatFormatting.RESET + overlayMessage;
+        	overlayMessage = TextFormatting.GRAY + "[" + (int)distanceFromMe + "] " + TextFormatting.RESET + overlayMessage;
         }
         
         return overlayMessage;
@@ -319,7 +319,7 @@ public class PlayerLocator extends ZyinHUDModBase
             if (ShowDistanceToPlayers)
             {
                 //overlayMessage = "[" + (int)distanceFromMe + "] " + overlayMessage;
-            	overlayMessage = EnumChatFormatting.GRAY + "[" + (int)distanceFromMe + "] " + EnumChatFormatting.RESET + overlayMessage;
+            	overlayMessage = TextFormatting.GRAY + "[" + (int)distanceFromMe + "] " + TextFormatting.RESET + overlayMessage;
             }
 
             //add special effects based on what the other player is doing
@@ -411,11 +411,11 @@ public class PlayerLocator extends ZyinHUDModBase
         }
         else if (Mode == Modes.ON)
         {
-            return EnumChatFormatting.WHITE + Localization.get("playerlocator.infoline");
+            return TextFormatting.WHITE + Localization.get("playerlocator.infoline");
         }
         else
         {
-            return EnumChatFormatting.WHITE + "???";
+            return TextFormatting.WHITE + "???";
         }
     }
 

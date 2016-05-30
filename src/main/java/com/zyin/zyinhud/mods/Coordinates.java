@@ -2,7 +2,7 @@ package com.zyin.zyinhud.mods;
 
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiTextField;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 import com.zyin.zyinhud.mods.Clock.Modes;
 import com.zyin.zyinhud.util.Localization;
@@ -95,11 +95,11 @@ public class Coordinates extends ZyinHUDModBase
     };
     private static final String oreBoundaryColors[] =
     {
-        EnumChatFormatting.WHITE.toString(),	//nothing below 5
-        EnumChatFormatting.AQUA.toString(),		//diamonds stop
-        EnumChatFormatting.BLUE.toString(),		//lapis lazuli stops
-        EnumChatFormatting.YELLOW.toString()	//gold stops
-        //EnumChatFormatting.GRAY		//coal stops
+        TextFormatting.WHITE.toString(),	//nothing below 5
+        TextFormatting.AQUA.toString(),		//diamonds stop
+        TextFormatting.BLUE.toString(),		//lapis lazuli stops
+        TextFormatting.YELLOW.toString()	//gold stops
+        //TextFormatting.GRAY		//coal stops
     };
 
     /**
@@ -130,17 +130,17 @@ public class Coordinates extends ZyinHUDModBase
             String coordinatesString = "";
             if(Mode == Modes.XZY)
             {
-            	coordinatesString += EnumChatFormatting.WHITE + "[" + coordX + ", " + coordZ + ", " + yColor + coordY + EnumChatFormatting.WHITE + "]";
+            	coordinatesString += TextFormatting.WHITE + "[" + coordX + ", " + coordZ + ", " + yColor + coordY + TextFormatting.WHITE + "]";
 
                 if(ShowChunkCoordinates)
-                	coordinatesString += EnumChatFormatting.ITALIC + " [" + EnumChatFormatting.WHITE + (GetXCoordinate() & 15) + ", " + (GetZCoordinate() & 15) + ", " + (GetYCoordinate() & 15) + EnumChatFormatting.ITALIC + "]";
+                	coordinatesString += TextFormatting.ITALIC + " [" + TextFormatting.WHITE + (GetXCoordinate() & 15) + ", " + (GetZCoordinate() & 15) + ", " + (GetYCoordinate() & 15) + TextFormatting.ITALIC + "]";
             }
             else if(Mode == Modes.XYZ)
             {
-            	coordinatesString += EnumChatFormatting.WHITE + "[" + coordX + ", " + yColor + coordY + EnumChatFormatting.WHITE + ", " + coordZ + "]";
+            	coordinatesString += TextFormatting.WHITE + "[" + coordX + ", " + yColor + coordY + TextFormatting.WHITE + ", " + coordZ + "]";
 
 	            if(ShowChunkCoordinates)
-	            	coordinatesString += EnumChatFormatting.ITALIC + " [" + EnumChatFormatting.WHITE + (GetXCoordinate() & 15) + ", " + (GetYCoordinate() & 15) + ", " + (GetZCoordinate() & 15) + EnumChatFormatting.ITALIC + "]";
+	            	coordinatesString += TextFormatting.ITALIC + " [" + TextFormatting.WHITE + (GetXCoordinate() & 15) + ", " + (GetYCoordinate() & 15) + ", " + (GetZCoordinate() & 15) + TextFormatting.ITALIC + "]";
             }
             else
             {

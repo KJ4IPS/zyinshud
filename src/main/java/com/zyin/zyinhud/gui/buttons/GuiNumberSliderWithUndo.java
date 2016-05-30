@@ -33,7 +33,7 @@ public class GuiNumberSliderWithUndo extends GuiNumberSlider
 		//if mouseovered the undo symbol
 		if(IsUndoMouseovered(mouseX, mouseY))
 		{
-			undoSymbolColor = 0x55ffff;	//0x55ffff is the same as EnumChatFormatting.AQUA
+			undoSymbolColor = 0x55ffff;	//0x55ffff is the same as TextFormatting.AQUA
 		}
 		
 		mc.fontRendererObj.drawStringWithShadow(undoSymbol, undoSymbolX, undoSymbolY, undoSymbolColor);	//func_175063_a() is drawStringWithShadow()

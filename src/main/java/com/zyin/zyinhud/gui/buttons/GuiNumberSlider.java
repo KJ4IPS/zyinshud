@@ -8,7 +8,7 @@ import com.zyin.zyinhud.util.Localization;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.client.config.GuiUtils;
 
 public class GuiNumberSlider extends GuiButton
