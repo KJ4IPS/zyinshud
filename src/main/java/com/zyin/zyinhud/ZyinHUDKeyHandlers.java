@@ -117,29 +117,29 @@ public class ZyinHUDKeyHandlers
     	//event.dwheel =  120 = mouse wheel up
     	//event.dwheel = -120 = mouse wheel down
     	
-    	if(event.dx != 0 || event.dy != 0)	//mouse movement event
+    	if(event.getDx() != 0 || event.getDy() != 0)	//mouse movement event
     		return;
     	
     	//Mouse wheel scroll
-        if(event.dwheel != 0)
+        if(event.getDwheel() != 0)
         {
         	if(KEY_BINDINGS[11].isKeyDown())
         		ItemSelectorKeyHandler.OnMouseWheelScroll(event);
         }
 
         //Mouse side buttons
-        if(event.button == 3 || event.button == 4)
+        if(event.getButton() == 3 || event.getButton() == 4)
         {
-	        if(event.buttonstate)
+	        if(event.isButtonstate())
 	        {
 	            ItemSelectorKeyHandler.OnMouseSideButton(event);
 	        }
 	    }
 
         //Middle click
-        if(event.button == 2)
+        if(event.getButton() == 2)
         {
-        	if(event.buttonstate)
+        	if(event.isButtonstate())
         	{
             	Miscellaneous.OnMiddleClick();
         	}
