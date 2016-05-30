@@ -1,0 +1,22 @@
+machine:
+  timezone:
+    America/Los_Angeles
+  java:
+    version:
+      oraclejdk8
+      
+dependencies:
+  cache_directories:
+    - ".gradle"
+    - "~/.gradle"
+
+general:
+  branches:
+    only:
+      - development
+  artifacts:
+    - "build/libs"
+
+test:
+  override:
+    - ./gradlew reobfJar
