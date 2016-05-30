@@ -8,7 +8,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import com.zyin.zyinhud.ZyinHUDSound;
-import com.zyin.zyinhud.mods.EatingAid.Modes;
+//import com.zyin.zyinhud.mods.EatingAid.Modes;
 import com.zyin.zyinhud.util.Localization;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
