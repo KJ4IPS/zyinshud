@@ -237,7 +237,7 @@ public class AnimalInfo extends ZyinHUDModBase
         	
             EntityAgeable animal = (EntityAgeable)entity;
 
-            if (animal.riddenByEntity instanceof EntityPlayer)
+            if (animal.getRidingEntity() instanceof EntityPlayer)
             {
                 return;    //don't render stats of the horse/animal we are currently riding
             }
