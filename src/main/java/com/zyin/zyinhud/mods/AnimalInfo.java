@@ -187,8 +187,9 @@ public class AnimalInfo extends ZyinHUDModBase
             	list.add(horseSpeedMessage);
             	list.add(horseJumpMessage);
             	list.add(horseHPMessage);
-            	
-                if(horse.getHorseType() == 0)	//not a donkey
+
+                //TODO Verify correctness
+                if(horse.getHorseVariant() == 0)	//not a donkey
                 {
                 	list.add(horseColor);
                 	list.add(horseMarking);
