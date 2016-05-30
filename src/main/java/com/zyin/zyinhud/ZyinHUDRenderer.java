@@ -4,7 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.InventoryEffectRenderer;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.WorldRenderer;
+import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
@@ -207,15 +207,15 @@ public class ZyinHUDRenderer
 	private static void RenderTexture(int x, int y, TextureAtlasSprite textureAtlasSprite, int width, int height, double zLevel)
 	{
         Tessellator tessellator = Tessellator.getInstance();
-        WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+        VertexBuffer worldrenderer = tessellator.getBuffer();
         
         //worldrenderer.startDrawingQuads();
-        worldrenderer.func_181668_a(7, DefaultVertexFormats.field_181707_g);	//I have no clue what the DefaultVertexFormats are, but field_181707_g works
+        worldrenderer.begin(7, DefaultVertexFormats.POSITION_COLOR);	//I have no clue what the DefaultVertexFormats are, but field_181707_g works
         
-        worldrenderer.func_181662_b((double)(x), 			(double)(y + height), 	(double)zLevel).func_181673_a((double)textureAtlasSprite.getMaxU(), (double)textureAtlasSprite.getMaxV()).func_181675_d();
-        worldrenderer.func_181662_b((double)(x + width), 	(double)(y + height), 	(double)zLevel).func_181673_a((double)textureAtlasSprite.getMinU(), (double)textureAtlasSprite.getMaxV()).func_181675_d();
-        worldrenderer.func_181662_b((double)(x + width), 	(double)(y), 			(double)zLevel).func_181673_a((double)textureAtlasSprite.getMinU(), (double)textureAtlasSprite.getMinV()).func_181675_d();
-        worldrenderer.func_181662_b((double)(x), 			(double)(y), 			(double)zLevel).func_181673_a((double)textureAtlasSprite.getMaxU(), (double)textureAtlasSprite.getMinV()).func_181675_d();
+        worldrenderer.pos((double)(x), 			(double)(y + height), 	(double)zLevel).tex((double)textureAtlasSprite.getMaxU(), (double)textureAtlasSprite.getMaxV()).endVertex();
+        worldrenderer.pos((double)(x + width), 	(double)(y + height), 	(double)zLevel).tex((double)textureAtlasSprite.getMinU(), (double)textureAtlasSprite.getMaxV()).endVertex();
+        worldrenderer.pos((double)(x + width), 	(double)(y), 			(double)zLevel).tex((double)textureAtlasSprite.getMinU(), (double)textureAtlasSprite.getMinV()).endVertex();
+        worldrenderer.pos((double)(x), 			(double)(y), 			(double)zLevel).tex((double)textureAtlasSprite.getMaxU(), (double)textureAtlasSprite.getMinV()).endVertex();
         
         /* code from 1.8
         worldrenderer.addVertexWithUV((double)(x), 			(double)(y + height), 	(double)zLevel, (double)textureAtlasSprite.getMinU(), (double)textureAtlasSprite.getMaxV());
@@ -300,7 +300,7 @@ public class ZyinHUDRenderer
             int stringMiddle = textWidth / 2;
             
             Tessellator tessellator = Tessellator.getInstance();
-            WorldRenderer worldrenderer = tessellator.getWorldRenderer();
+            VertexBuffer worldrenderer = tessellator.getBuffer();
         	
             //GL11.glDisable(GL11.GL_TEXTURE_2D);
             GlStateManager.disableTexture2D();
@@ -317,11 +317,11 @@ public class ZyinHUDRenderer
             */
             
             //This code taken from 1.8.8 net.minecraft.client.renderer.entity.Render.renderLivingLabel()
-            worldrenderer.func_181668_a(7, DefaultVertexFormats.field_181706_f);
-            worldrenderer.func_181662_b(-stringMiddle - 1, -1 + 0, 0.0D).func_181666_a(0.0F, 0.0F, 0.0F, 0.25F).func_181675_d();
-            worldrenderer.func_181662_b(-stringMiddle - 1, 8 + lineHeight*text.length-lineHeight, 0.0D).func_181666_a(0.0F, 0.0F, 0.0F, 0.25F).func_181675_d();
-            worldrenderer.func_181662_b(stringMiddle + 1, 8 + lineHeight*text.length-lineHeight, 0.0D).func_181666_a(0.0F, 0.0F, 0.0F, 0.25F).func_181675_d();
-            worldrenderer.func_181662_b(stringMiddle + 1, -1 + 0, 0.0D).func_181666_a(0.0F, 0.0F, 0.0F, 0.25F).func_181675_d();
+            worldrenderer.begin(7, DefaultVertexFormats.POSITION_COLOR);
+            worldrenderer.pos(-stringMiddle - 1, -1 + 0, 0.0D).color(0.0F, 0.0F, 0.0F, 0.25F).endVertex();
+            worldrenderer.pos(-stringMiddle - 1, 8 + lineHeight*text.length-lineHeight, 0.0D).color(0.0F, 0.0F, 0.0F, 0.25F).endVertex();
+            worldrenderer.pos(stringMiddle + 1, 8 + lineHeight*text.length-lineHeight, 0.0D).color(0.0F, 0.0F, 0.0F, 0.25F).endVertex();
+            worldrenderer.pos(stringMiddle + 1, -1 + 0, 0.0D).color(0.0F, 0.0F, 0.0F, 0.25F).endVertex();
             
             tessellator.draw();
             //GL11.glEnable(GL11.GL_TEXTURE_2D);
