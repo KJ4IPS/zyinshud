@@ -24,7 +24,7 @@ import com.zyin.zyinhud.mods.Miscellaneous;
 //import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
-//import com.zyin.zyinhud.mods.SafeOverlay;
+import com.zyin.zyinhud.mods.SafeOverlay;
 //import com.zyin.zyinhud.mods.TorchAid;
 //import com.zyin.zyinhud.mods.WeaponSwapper;
 import com.zyin.zyinhud.util.Localization;
@@ -343,49 +343,49 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_SAFEOVERLAY
-//        p = config.get(CATEGORY_SAFEOVERLAY, "EnableSafeOverlay", true);
-//        p.setComment("Enable/Disable the Safe Overlay.");
-//        if(loadSettings)
-//        	SafeOverlay.Enabled = p.getBoolean(true);
-//        else
-//        	p.set(SafeOverlay.Enabled);
-//
-//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayMode", "OFF");
-//        p.setComment("Sets the Safe Overlay mode.");
-//        if(loadSettings)
-//        	SafeOverlay.Mode = SafeOverlay.Modes.GetMode(p.getString());
-//        else
-//        	p.set(SafeOverlay.Mode.name());
-//
-//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDrawDistance", 20);
-//        p.setComment("How far away unsafe spots should be rendered around the player measured in blocks. This can be changed in game with - + "
-//        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+" and + + "
-//        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
-//        if(loadSettings)
-//        	SafeOverlay.instance.SetDrawDistance(p.getInt(20));
-//        else
-//        	p.set(SafeOverlay.instance.GetDrawDistance());
-//
-//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayTransparency", 0.3);
-//        p.setComment("The transparency of the unsafe marks. Must be between greater than 0.1 and less than or equal to 1.");
-//        if(loadSettings)
-//        	SafeOverlay.instance.SetUnsafeOverlayTransparency((float)p.getDouble(0.3));
-//        else
-//        	p.set(SafeOverlay.instance.GetUnsafeOverlayTransparency());
-//
-//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDisplayInNether", false);
-//        p.setComment("Enable/Disable showing unsafe areas in the Nether.");
-//        if(loadSettings)
-//        	SafeOverlay.instance.SetDisplayInNether(p.getBoolean(false));
-//        else
-//        	p.set(SafeOverlay.instance.GetDisplayInNether());
-//
-//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlaySeeThroughWalls", false);
-//        p.setComment("Enable/Disable showing unsafe areas through walls. Toggle in game with Ctrl + "+Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
-//        if(loadSettings)
-//        	SafeOverlay.instance.SetSeeUnsafePositionsThroughWalls(p.getBoolean(false));
-//        else
-//        	p.set(SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
+        p = config.get(CATEGORY_SAFEOVERLAY, "EnableSafeOverlay", true);
+        p.setComment("Enable/Disable the Safe Overlay.");
+        if(loadSettings)
+        	SafeOverlay.Enabled = p.getBoolean(true);
+        else
+        	p.set(SafeOverlay.Enabled);
+
+        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayMode", "OFF");
+        p.setComment("Sets the Safe Overlay mode.");
+        if(loadSettings)
+        	SafeOverlay.Mode = SafeOverlay.Modes.GetMode(p.getString());
+        else
+        	p.set(SafeOverlay.Mode.name());
+
+        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDrawDistance", 20);
+        p.setComment("How far away unsafe spots should be rendered around the player measured in blocks. This can be changed in game with - + "
+        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+" and + + "
+        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
+        if(loadSettings)
+        	SafeOverlay.instance.SetDrawDistance(p.getInt(20));
+        else
+        	p.set(SafeOverlay.instance.GetDrawDistance());
+
+        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayTransparency", 0.3);
+        p.setComment("The transparency of the unsafe marks. Must be between greater than 0.1 and less than or equal to 1.");
+        if(loadSettings)
+        	SafeOverlay.instance.SetUnsafeOverlayTransparency((float)p.getDouble(0.3));
+        else
+        	p.set(SafeOverlay.instance.GetUnsafeOverlayTransparency());
+
+        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDisplayInNether", false);
+        p.setComment("Enable/Disable showing unsafe areas in the Nether.");
+        if(loadSettings)
+        	SafeOverlay.instance.SetDisplayInNether(p.getBoolean(false));
+        else
+        	p.set(SafeOverlay.instance.GetDisplayInNether());
+
+        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlaySeeThroughWalls", false);
+        p.setComment("Enable/Disable showing unsafe areas through walls. Toggle in game with Ctrl + "+Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
+        if(loadSettings)
+        	SafeOverlay.instance.SetSeeUnsafePositionsThroughWalls(p.getBoolean(false));
+        else
+        	p.set(SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
 
 
         //CATEGORY_POTIONTIMERS
