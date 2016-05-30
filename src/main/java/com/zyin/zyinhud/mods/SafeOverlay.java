@@ -38,7 +38,7 @@ import net.minecraft.block.BlockWeb;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.EnumSkyBlock;
 
 import org.lwjgl.opengl.GL11;

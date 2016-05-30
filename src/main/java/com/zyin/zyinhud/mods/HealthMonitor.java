@@ -4,7 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.util.MathHelper;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import com.zyin.zyinhud.ZyinHUDSound;
