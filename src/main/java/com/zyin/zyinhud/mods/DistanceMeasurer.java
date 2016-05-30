@@ -3,7 +3,7 @@ package com.zyin.zyinhud.mods;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.MovingObjectPosition;
 
 import com.zyin.zyinhud.util.Localization;
@@ -139,22 +139,22 @@ public class DistanceMeasurer extends ZyinHUDModBase
             	double farthestHorizontalDistance = Math.max(Math.abs(deltaX), Math.abs(deltaZ));
                 double farthestDistance = Math.max(Math.abs(deltaY), farthestHorizontalDistance);
                 
-                return EnumChatFormatting.GOLD + "[" + String.format("%1$,.1f", farthestDistance) + "]";
+                return TextFormatting.GOLD + "[" + String.format("%1$,.1f", farthestDistance) + "]";
             }
             else if (Mode == Modes.COORDINATE)
             {
             	BlockPos pos = objectMouseOver.getBlockPos();
             	
-                return EnumChatFormatting.GOLD + "[" + pos.getX() + ", " + pos.getY() + ", " + pos.getZ() + "]";
+                return TextFormatting.GOLD + "[" + pos.getX() + ", " + pos.getY() + ", " + pos.getZ() + "]";
             }
             else
             {
-            	return EnumChatFormatting.GOLD + "[???]";
+            	return TextFormatting.GOLD + "[???]";
             }
         }
         else
         {
-        	return EnumChatFormatting.GOLD + "["+Localization.get("distancemeasurer.far")+"]";
+        	return TextFormatting.GOLD + "["+Localization.get("distancemeasurer.far")+"]";
         }
     }
 }

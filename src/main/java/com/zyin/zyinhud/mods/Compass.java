@@ -1,6 +1,6 @@
 package com.zyin.zyinhud.mods;
 
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 import com.zyin.zyinhud.util.Localization;
 
@@ -96,13 +96,13 @@ public class Compass extends ZyinHUDModBase
             	}
             	
             	
-            	mc.fontRendererObj.drawStringWithShadow(EnumChatFormatting.RED + compassDirection, InfoLine.infoLineLocX + x + x_padding, InfoLine.infoLineLocY, 0xffffff);
+            	mc.fontRendererObj.drawStringWithShadow(TextFormatting.RED + compassDirection, InfoLine.infoLineLocX + x + x_padding, InfoLine.infoLineLocY, 0xffffff);
             	
-            	return EnumChatFormatting.GRAY + brackets;
+            	return TextFormatting.GRAY + brackets;
             }
             else
             {
-                return EnumChatFormatting.GRAY + "[" + EnumChatFormatting.RED + compassDirection + EnumChatFormatting.GRAY + "]";
+                return TextFormatting.GRAY + "[" + TextFormatting.RED + compassDirection + TextFormatting.GRAY + "]";
             }
         }
 

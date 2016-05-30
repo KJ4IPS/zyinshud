@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import com.zyin.zyinhud.util.ZyinHUDUtil;
 
 /**
@@ -20,7 +20,7 @@ public abstract class GuiTooltipScreen extends GuiScreen
 	public static boolean ShowTooltipButtonMouseoverEffect = true;
 	
 	/** Putting this string into a tooltip will cause a line break */
-    public String tooltipNewlineDelimeter = "_p"; //"§p";	//the "§" symbol doesn't seem to work
+    public String tooltipNewlineDelimeter = "_p"; //"ï¿½p";	//the "ï¿½" symbol doesn't seem to work
     
     /** The amount of time in milliseconds until a tooltip is rendered */
 	public long tooltipDelay = 900;
@@ -154,7 +154,7 @@ public abstract class GuiTooltipScreen extends GuiScreen
 	{
 		boolean flag = mc.fontRendererObj.getUnicodeFlag();
 		mc.fontRendererObj.setUnicodeFlag(true);
-		mc.fontRendererObj.drawString(EnumChatFormatting.AQUA + "?", button.xPosition+button.getButtonWidth()-5, button.yPosition, 0xFFFFFF);
+		mc.fontRendererObj.drawString(TextFormatting.AQUA + "?", button.xPosition+button.getButtonWidth()-5, button.yPosition, 0xFFFFFF);
 		mc.fontRendererObj.setUnicodeFlag(flag);
 	}
 	

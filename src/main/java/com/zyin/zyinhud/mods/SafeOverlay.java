@@ -37,7 +37,7 @@ import net.minecraft.block.BlockWall;
 import net.minecraft.block.BlockWeb;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumSkyBlock;
 
@@ -455,11 +455,11 @@ public class SafeOverlay extends ZyinHUDModBase
         }
         else if (Mode == Modes.ON)
         {
-            return EnumChatFormatting.WHITE + Localization.get("safeoverlay.infoline");
+            return TextFormatting.WHITE + Localization.get("safeoverlay.infoline");
         }
         else
         {
-            return EnumChatFormatting.WHITE + "???";
+            return TextFormatting.WHITE + "???";
         }
     }
 

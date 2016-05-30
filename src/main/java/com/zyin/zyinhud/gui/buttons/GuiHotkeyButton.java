@@ -3,7 +3,7 @@ package com.zyin.zyinhud.gui.buttons;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.settings.KeyBinding;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 import org.lwjgl.input.Keyboard;
 
@@ -58,7 +58,7 @@ public class GuiHotkeyButton extends GuiButton
 	protected void UpdateDisplayString()
 	{
     	if(waitingForHotkeyInput)
-    		displayString = Localization.get("gui.options.hotkey") + EnumChatFormatting.WHITE + "> " + EnumChatFormatting.YELLOW + GetHotkey() + EnumChatFormatting.WHITE + " <";
+    		displayString = Localization.get("gui.options.hotkey") + TextFormatting.WHITE + "> " + TextFormatting.YELLOW + GetHotkey() + TextFormatting.WHITE + " <";
     	else
     		displayString = Localization.get("gui.options.hotkey") + GetHotkey();
 		

@@ -21,7 +21,7 @@ import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 
 import org.apache.commons.lang3.text.WordUtils;
 
@@ -349,11 +349,11 @@ public class AnimalInfo extends ZyinHUDModBase
         }
         else if (Mode == Modes.ON)
         {
-            return EnumChatFormatting.WHITE + Localization.get("animalinfo.infoline");
+            return TextFormatting.WHITE + Localization.get("animalinfo.infoline");
         }
         else
         {
-            return EnumChatFormatting.WHITE + "???";
+            return TextFormatting.WHITE + "???";
         }
     }
 
@@ -397,11 +397,11 @@ public class AnimalInfo extends ZyinHUDModBase
         String horseSpeedString = decimalFormat.format(horseSpeed);
 
         if (horseSpeed > perfectHorseSpeedThreshold)
-            horseSpeedString = EnumChatFormatting.AQUA + horseSpeedString + EnumChatFormatting.WHITE;
+            horseSpeedString = TextFormatting.AQUA + horseSpeedString + TextFormatting.WHITE;
         else if (horseSpeed > goodHorseSpeedThreshold)
-            horseSpeedString = EnumChatFormatting.GREEN + horseSpeedString + EnumChatFormatting.WHITE;
+            horseSpeedString = TextFormatting.GREEN + horseSpeedString + TextFormatting.WHITE;
         else if (horseSpeed < badHorseSpeedThreshold)
-            horseSpeedString = EnumChatFormatting.RED + horseSpeedString + EnumChatFormatting.WHITE;
+            horseSpeedString = TextFormatting.RED + horseSpeedString + TextFormatting.WHITE;
 
         return horseSpeedString;
     }
@@ -417,11 +417,11 @@ public class AnimalInfo extends ZyinHUDModBase
         String horseHPString = decimalFormat.format(GetEntityMaxHP(horse));
 
         if (horseHP > perfectHorseHPThreshold)
-            horseHPString = EnumChatFormatting.AQUA + horseHPString + EnumChatFormatting.WHITE;
+            horseHPString = TextFormatting.AQUA + horseHPString + TextFormatting.WHITE;
         else if (horseHP > goodHorseHPThreshold)
-            horseHPString = EnumChatFormatting.GREEN + horseHPString + EnumChatFormatting.WHITE;
+            horseHPString = TextFormatting.GREEN + horseHPString + TextFormatting.WHITE;
         else if (horseHP < badHorseHPThreshold)
-            horseHPString = EnumChatFormatting.RED + horseHPString + EnumChatFormatting.WHITE;
+            horseHPString = TextFormatting.RED + horseHPString + TextFormatting.WHITE;
 
         return horseHPString;
     }
@@ -438,11 +438,11 @@ public class AnimalInfo extends ZyinHUDModBase
         String horseHeartsString = "" + horseHearts;
 
         if (horseHP > perfectHorseHPThreshold)
-            horseHeartsString = EnumChatFormatting.AQUA + horseHeartsString + EnumChatFormatting.WHITE;
+            horseHeartsString = TextFormatting.AQUA + horseHeartsString + TextFormatting.WHITE;
         else if (horseHP > goodHorseHPThreshold)
-                horseHeartsString = EnumChatFormatting.GREEN + horseHeartsString + EnumChatFormatting.WHITE;
+                horseHeartsString = TextFormatting.GREEN + horseHeartsString + TextFormatting.WHITE;
         else if (horseHP < badHorseHPThreshold)
-            horseHeartsString = EnumChatFormatting.RED + horseHeartsString + EnumChatFormatting.WHITE;
+            horseHeartsString = TextFormatting.RED + horseHeartsString + TextFormatting.WHITE;
 
         return horseHeartsString;
     }
@@ -458,11 +458,11 @@ public class AnimalInfo extends ZyinHUDModBase
         String horseJumpString = decimalFormat.format(horseJump);
 
         if (horseJump > perfectHorseJumpThreshold)
-            horseJumpString = EnumChatFormatting.AQUA + horseJumpString + EnumChatFormatting.WHITE;
+            horseJumpString = TextFormatting.AQUA + horseJumpString + TextFormatting.WHITE;
         else if (horseJump > goodHorseJumpThreshold)
-            horseJumpString = EnumChatFormatting.GREEN + horseJumpString + EnumChatFormatting.WHITE;
+            horseJumpString = TextFormatting.GREEN + horseJumpString + TextFormatting.WHITE;
         else if (horseJump < badHorseJumpThreshold)
-            horseJumpString = EnumChatFormatting.RED + horseJumpString + EnumChatFormatting.WHITE;
+            horseJumpString = TextFormatting.RED + horseJumpString + TextFormatting.WHITE;
 
         return horseJumpString;
     }

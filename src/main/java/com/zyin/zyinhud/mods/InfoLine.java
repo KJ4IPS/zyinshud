@@ -4,7 +4,7 @@ import net.minecraft.client.gui.GuiChat;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.MathHelper;
 
 import org.lwjgl.opengl.GL11;
@@ -148,7 +148,7 @@ public class InfoLine extends ZyinHUDModBase
         int zCoord = MathHelper.floor_double(mc.thePlayer.posZ);
         
     	String biomeName = mc.theWorld.getBiomeGenForCoords(new BlockPos(xCoord, 64, zCoord)).biomeName;
-    	return EnumChatFormatting.WHITE + biomeName;
+    	return TextFormatting.WHITE + biomeName;
     }
     
     /**

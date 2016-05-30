@@ -7,7 +7,7 @@ import net.minecraft.inventory.ContainerRepair;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraftforge.client.event.GuiOpenEvent;
 import net.minecraftforge.client.event.GuiScreenEvent.DrawScreenEvent;
@@ -76,9 +76,9 @@ public class Miscellaneous extends ZyinHUDModBase
         	String leftItemRepairCost;
         	
         	if(timesRepaired >= maxRepairTimes)
-        		leftItemRepairCost = EnumChatFormatting.RED.toString() + timesRepaired + EnumChatFormatting.DARK_GRAY + "/" + maxRepairTimes;
+        		leftItemRepairCost = TextFormatting.RED.toString() + timesRepaired + TextFormatting.DARK_GRAY + "/" + maxRepairTimes;
         	else
-        		leftItemRepairCost = EnumChatFormatting.DARK_GRAY.toString() + timesRepaired + "/" + maxRepairTimes;
+        		leftItemRepairCost = TextFormatting.DARK_GRAY.toString() + timesRepaired + "/" + maxRepairTimes;
         	
         	mc.fontRendererObj.drawString(leftItemRepairCost, guiRepairXOrigin + 26, guiRepairYOrigin + 37, 0xffffff);
         }
@@ -88,16 +88,16 @@ public class Miscellaneous extends ZyinHUDModBase
         	String rightItemRepairCost;
         	
         	if(timesRepaired >= maxRepairTimes)
-        		rightItemRepairCost = EnumChatFormatting.RED.toString() + timesRepaired + EnumChatFormatting.DARK_GRAY + "/" + maxRepairTimes;
+        		rightItemRepairCost = TextFormatting.RED.toString() + timesRepaired + TextFormatting.DARK_GRAY + "/" + maxRepairTimes;
         	else
-        		rightItemRepairCost = EnumChatFormatting.DARK_GRAY.toString() + timesRepaired + "/" + maxRepairTimes;
+        		rightItemRepairCost = TextFormatting.DARK_GRAY.toString() + timesRepaired + "/" + maxRepairTimes;
         	
         	mc.fontRendererObj.drawString(rightItemRepairCost, guiRepairXOrigin + 76, guiRepairYOrigin + 37, 0xffffff);
         }
         if(leftItemStack != null && rightItemStack != null)
         {
         	int timesRepaired = GetTimesRepaired(leftItemStack) + GetTimesRepaired(rightItemStack) + 1;
-        	String finalItemRepairCost = EnumChatFormatting.DARK_GRAY.toString() + timesRepaired+"/" + maxRepairTimes;
+        	String finalItemRepairCost = TextFormatting.DARK_GRAY.toString() + timesRepaired+"/" + maxRepairTimes;
         	
         	if(timesRepaired <= maxRepairTimes)
         	{
