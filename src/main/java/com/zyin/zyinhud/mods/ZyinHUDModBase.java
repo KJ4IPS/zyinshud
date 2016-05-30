@@ -1,7 +1,7 @@
 package com.zyin.zyinhud.mods;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.renderer.RenderItem;
 
 public abstract class ZyinHUDModBase
 {
