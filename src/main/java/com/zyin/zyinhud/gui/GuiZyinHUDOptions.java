@@ -181,13 +181,13 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	 */
     public static void InitGuiEventPost(InitGuiEvent.Post event)
 	{
-		int width = event.gui.width;
-		int height = event.gui.height;
+		int width = event.getGui().width;
+		int height = event.getGui().height;
 		
-		if(event.gui instanceof GuiOptions && Minecraft.getMinecraft().theWorld != null)
+		if(event.getGui() instanceof GuiOptions && Minecraft.getMinecraft().theWorld != null)
 		{
 			zyinHudOptionsButton = new GuiButton(1337, width / 2 + 5, height / 6 + 24 - 6, 150, 20, Localization.get("gui.override.options.buttons.options"));
-			event.buttonList.add(zyinHudOptionsButton);
+			event.getButtonList().add(zyinHudOptionsButton);
 		}
 	}
     
@@ -197,11 +197,11 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
      */
 	public static void ActionPerformedEventPost(ActionPerformedEvent.Post event)
 	{
-		if(event.gui instanceof GuiOptions)
+		if(event.getGui() instanceof GuiOptions)
 		{
-			if(event.button.id == zyinHudOptionsButton.id)
+			if(event.getButton().id == zyinHudOptionsButton.id)
 			{
-				Minecraft.getMinecraft().displayGuiScreen(new GuiZyinHUDOptions(event.gui));
+				Minecraft.getMinecraft().displayGuiScreen(new GuiZyinHUDOptions(event.getGui()));
 			}
 		}
 	}
