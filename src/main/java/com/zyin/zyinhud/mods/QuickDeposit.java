@@ -20,7 +20,7 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 
 import com.zyin.zyinhud.ZyinHUDSound;
-import com.zyin.zyinhud.util.InventoryUtil;
+//import com.zyin.zyinhud.util.InventoryUtil;
 import com.zyin.zyinhud.util.ModCompatibility;
 
 /**
@@ -81,19 +81,19 @@ public class QuickDeposit extends ZyinHUDModBase
 	    	}
 	    	else if(mc.currentScreen instanceof GuiMerchant)
 	    	{
-	    		InventoryUtil.DepositAllMatchingItemsInMerchant();
+//	    		InventoryUtil.DepositAllMatchingItemsInMerchant();
 	    	}
 	    	else if(mc.currentScreen instanceof GuiFurnace)
 	    	{
-	    		InventoryUtil.DepositAllMatchingItemsInFurance();
+//	    		InventoryUtil.DepositAllMatchingItemsInFurance();
 	    	}
 	    	else if(mc.currentScreen instanceof GuiBrewingStand)
 	    	{
-	    		InventoryUtil.DepositAllMatchingItemsInBrewingStand();
+//	    		InventoryUtil.DepositAllMatchingItemsInBrewingStand();
 	    	}
 	    	else	//single chest, double chest, donkey/mules, hopper, dropper, dispenser
 	    	{
-	    		InventoryUtil.DepositAllMatchingItemsInContainer(onlyDepositMatchingItems, IgnoreItemsInHotbar);
+//	    		InventoryUtil.DepositAllMatchingItemsInContainer(onlyDepositMatchingItems, IgnoreItemsInHotbar);
 	        	
 	        	if(CloseChestAfterDepositing)
 	        		mc.thePlayer.closeScreen();

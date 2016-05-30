@@ -187,10 +187,10 @@ public class ZyinHUDKeyHandlers
             useBlockButtonDown = Keyboard.isKeyDown(mc.gameSettings.keyBindUseItem.getKeyCode());
     	}
     	
-    	if(useBlockButtonDown == true & useBlockButtonPreviouslyDown == false)
-    		OnUseBlockPressed();
-    	else if(useBlockButtonDown == false & useBlockButtonPreviouslyDown == true)
-    		OnUseBlockReleased();
+//    	if(useBlockButtonDown == true & useBlockButtonPreviouslyDown == false)
+//    		OnUseBlockPressed();
+//    	else if(useBlockButtonDown == false & useBlockButtonPreviouslyDown == true)
+//    		OnUseBlockReleased();
     	
     	useBlockButtonPreviouslyDown = useBlockButtonDown;
     }

@@ -25,7 +25,7 @@ import com.zyin.zyinhud.mods.AnimalInfo;
 //import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
 import com.zyin.zyinhud.mods.InfoLine;
-import com.zyin.zyinhud.mods.ItemSelector;
+//import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.PotionTimers;
 //import com.zyin.zyinhud.mods.SafeOverlay;
 /**
@@ -52,7 +52,7 @@ public class ZyinHUDRenderer
             DurabilityInfo.RenderOntoHUD();
             PotionTimers.RenderOntoHUD();
             HUDEntityTrackerHelper.RenderEntityInfo(event.getPartialTicks());	//calls other mods that need to render things on the HUD near entities
-            ItemSelector.RenderOntoHUD(event.getPartialTicks());
+//            ItemSelector.RenderOntoHUD(event.getPartialTicks());
     	}
     	else if(event.getType() == RenderGameOverlayEvent.ElementType.DEBUG)
     	{
