@@ -15,8 +15,8 @@ public class EnderPearlAidKeyHandler implements ZyinHUDKeyHandlerBase
             return;    //don't activate if the user is looking at a GUI
         }
 
-		if (EnderPearlAid.Enabled)
-            EnderPearlAid.UseEnderPearl();
+//		if (EnderPearlAid.Enabled)
+//            EnderPearlAid.UseEnderPearl();
 	   
 	}
 }

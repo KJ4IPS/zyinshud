@@ -11,22 +11,22 @@ import com.zyin.zyinhud.mods.AnimalInfo;
 import com.zyin.zyinhud.mods.Clock;
 import com.zyin.zyinhud.mods.Compass;
 import com.zyin.zyinhud.mods.Coordinates;
-import com.zyin.zyinhud.mods.DistanceMeasurer;
+//import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
-import com.zyin.zyinhud.mods.EatingAid;
-import com.zyin.zyinhud.mods.EnderPearlAid;
+//import com.zyin.zyinhud.mods.EatingAid;
+//import com.zyin.zyinhud.mods.EnderPearlAid;
 import com.zyin.zyinhud.mods.Fps;
 import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
 import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
-import com.zyin.zyinhud.mods.PlayerLocator;
-import com.zyin.zyinhud.mods.PotionAid;
+//import com.zyin.zyinhud.mods.PlayerLocator;
+//import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
-import com.zyin.zyinhud.mods.SafeOverlay;
-import com.zyin.zyinhud.mods.TorchAid;
-import com.zyin.zyinhud.mods.WeaponSwapper;
+//import com.zyin.zyinhud.mods.SafeOverlay;
+//import com.zyin.zyinhud.mods.TorchAid;
+//import com.zyin.zyinhud.mods.WeaponSwapper;
 import com.zyin.zyinhud.util.Localization;
 
 /**
@@ -234,19 +234,19 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_DISTANCEMEASURER
-        p = config.get(CATEGORY_DISTANCEMEASURER, "EnableDistanceMeasurer", true);
-        p.setComment("Enable/Disable the distance measurer.");
-        if(loadSettings)
-        	DistanceMeasurer.Enabled = p.getBoolean(true);
-        else
-        	p.set(DistanceMeasurer.Enabled);
-
-        p = config.get(CATEGORY_DISTANCEMEASURER, "DistanceMeasurerMode", "OFF");
-        p.setComment("Sets the Distance Measurer mode.");
-        if(loadSettings)
-        	DistanceMeasurer.Mode = DistanceMeasurer.Modes.GetMode(p.getString());
-        else
-        	p.set(DistanceMeasurer.Mode.name());
+//        p = config.get(CATEGORY_DISTANCEMEASURER, "EnableDistanceMeasurer", true);
+//        p.setComment("Enable/Disable the distance measurer.");
+//        if(loadSettings)
+//        	DistanceMeasurer.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(DistanceMeasurer.Enabled);
+//
+//        p = config.get(CATEGORY_DISTANCEMEASURER, "DistanceMeasurerMode", "OFF");
+//        p.setComment("Sets the Distance Measurer mode.");
+//        if(loadSettings)
+//        	DistanceMeasurer.Mode = DistanceMeasurer.Modes.GetMode(p.getString());
+//        else
+//        	p.set(DistanceMeasurer.Mode.name());
 
 
         //CATEGORY_DURABILITYINFO
@@ -343,49 +343,49 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_SAFEOVERLAY
-        p = config.get(CATEGORY_SAFEOVERLAY, "EnableSafeOverlay", true);
-        p.setComment("Enable/Disable the Safe Overlay.");
-        if(loadSettings)
-        	SafeOverlay.Enabled = p.getBoolean(true);
-        else
-        	p.set(SafeOverlay.Enabled);
-
-        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayMode", "OFF");
-        p.setComment("Sets the Safe Overlay mode.");
-        if(loadSettings)
-        	SafeOverlay.Mode = SafeOverlay.Modes.GetMode(p.getString());
-        else
-        	p.set(SafeOverlay.Mode.name());
-
-        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDrawDistance", 20);
-        p.setComment("How far away unsafe spots should be rendered around the player measured in blocks. This can be changed in game with - + "
-        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+" and + + "
-        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
-        if(loadSettings)
-        	SafeOverlay.instance.SetDrawDistance(p.getInt(20));
-        else
-        	p.set(SafeOverlay.instance.GetDrawDistance());
-
-        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayTransparency", 0.3);
-        p.setComment("The transparency of the unsafe marks. Must be between greater than 0.1 and less than or equal to 1.");
-        if(loadSettings)
-        	SafeOverlay.instance.SetUnsafeOverlayTransparency((float)p.getDouble(0.3));
-        else
-        	p.set(SafeOverlay.instance.GetUnsafeOverlayTransparency());
-
-        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDisplayInNether", false);
-        p.setComment("Enable/Disable showing unsafe areas in the Nether.");
-        if(loadSettings)
-        	SafeOverlay.instance.SetDisplayInNether(p.getBoolean(false));
-        else
-        	p.set(SafeOverlay.instance.GetDisplayInNether());
-
-        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlaySeeThroughWalls", false);
-        p.setComment("Enable/Disable showing unsafe areas through walls. Toggle in game with Ctrl + "+Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
-        if(loadSettings)
-        	SafeOverlay.instance.SetSeeUnsafePositionsThroughWalls(p.getBoolean(false));
-        else
-        	p.set(SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
+//        p = config.get(CATEGORY_SAFEOVERLAY, "EnableSafeOverlay", true);
+//        p.setComment("Enable/Disable the Safe Overlay.");
+//        if(loadSettings)
+//        	SafeOverlay.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(SafeOverlay.Enabled);
+//
+//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayMode", "OFF");
+//        p.setComment("Sets the Safe Overlay mode.");
+//        if(loadSettings)
+//        	SafeOverlay.Mode = SafeOverlay.Modes.GetMode(p.getString());
+//        else
+//        	p.set(SafeOverlay.Mode.name());
+//
+//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDrawDistance", 20);
+//        p.setComment("How far away unsafe spots should be rendered around the player measured in blocks. This can be changed in game with - + "
+//        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+" and + + "
+//        			+ Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
+//        if(loadSettings)
+//        	SafeOverlay.instance.SetDrawDistance(p.getInt(20));
+//        else
+//        	p.set(SafeOverlay.instance.GetDrawDistance());
+//
+//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayTransparency", 0.3);
+//        p.setComment("The transparency of the unsafe marks. Must be between greater than 0.1 and less than or equal to 1.");
+//        if(loadSettings)
+//        	SafeOverlay.instance.SetUnsafeOverlayTransparency((float)p.getDouble(0.3));
+//        else
+//        	p.set(SafeOverlay.instance.GetUnsafeOverlayTransparency());
+//
+//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlayDisplayInNether", false);
+//        p.setComment("Enable/Disable showing unsafe areas in the Nether.");
+//        if(loadSettings)
+//        	SafeOverlay.instance.SetDisplayInNether(p.getBoolean(false));
+//        else
+//        	p.set(SafeOverlay.instance.GetDisplayInNether());
+//
+//        p = config.get(CATEGORY_SAFEOVERLAY, "SafeOverlaySeeThroughWalls", false);
+//        p.setComment("Enable/Disable showing unsafe areas through walls. Toggle in game with Ctrl + "+Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[8].getKeyCode())+".");
+//        if(loadSettings)
+//        	SafeOverlay.instance.SetSeeUnsafePositionsThroughWalls(p.getBoolean(false));
+//        else
+//        	p.set(SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
 
 
         //CATEGORY_POTIONTIMERS
@@ -441,116 +441,116 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_PLAYERLOCATOR
-        p = config.get(CATEGORY_PLAYERLOCATOR, "EnablePlayerLocator", true);
-        p.setComment("Enable/Disable the Player Locator.");
-        if(loadSettings)
-        	PlayerLocator.Enabled = p.getBoolean(true);
-        else
-        	p.set(PlayerLocator.Enabled);
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMode", "OFF");
-        p.setComment("Sets the Player Locator mode.");
-        if(loadSettings)
-        	PlayerLocator.Mode = PlayerLocator.Modes.GetMode(p.getString());
-        else
-        	p.set(PlayerLocator.Mode.name());
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowDistanceToPlayers", false);
-        p.setComment("Show how far away you are from the other players next to their name.");
-        if(loadSettings)
-        	PlayerLocator.ShowDistanceToPlayers = p.getBoolean(false);
-        else
-        	p.set(PlayerLocator.ShowDistanceToPlayers);
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowPlayerHealth", false);
-        p.setComment("Show how much health players have by their name.");
-        if(loadSettings)
-        	PlayerLocator.ShowPlayerHealth = p.getBoolean(false);
-        else
-        	p.set(PlayerLocator.ShowPlayerHealth);
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMinViewDistance", 0);
-        p.setComment("Stop showing player names when they are this close (distance measured in blocks).");
-        if(loadSettings)
-        	PlayerLocator.viewDistanceCutoff = p.getInt(0);
-        else
-        	p.set(PlayerLocator.viewDistanceCutoff);
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWolves", true);
-        p.setComment("Show your tamed wolves in addition to other players.");
-        if(loadSettings)
-        	PlayerLocator.ShowWolves = p.getBoolean(true);
-        else
-        	p.set(PlayerLocator.ShowWolves);
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "UseWolfColors", true);
-        p.setComment("Use the color of your wolf's collar to colorize their name.");
-        if(loadSettings)
-        	PlayerLocator.UseWolfColors = p.getBoolean(true);
-        else
-        	p.set(PlayerLocator.UseWolfColors);
-
-        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWitherSkeletons", false);
-        p.setComment("Show wither skeletons in addition to other players.");
-        if(loadSettings)
-        	PlayerLocator.ShowWitherSkeletons = p.getBoolean(false);
-        else
-        	p.set(PlayerLocator.ShowWitherSkeletons);
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "EnablePlayerLocator", true);
+//        p.setComment("Enable/Disable the Player Locator.");
+//        if(loadSettings)
+//        	PlayerLocator.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(PlayerLocator.Enabled);
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMode", "OFF");
+//        p.setComment("Sets the Player Locator mode.");
+//        if(loadSettings)
+//        	PlayerLocator.Mode = PlayerLocator.Modes.GetMode(p.getString());
+//        else
+//        	p.set(PlayerLocator.Mode.name());
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowDistanceToPlayers", false);
+//        p.setComment("Show how far away you are from the other players next to their name.");
+//        if(loadSettings)
+//        	PlayerLocator.ShowDistanceToPlayers = p.getBoolean(false);
+//        else
+//        	p.set(PlayerLocator.ShowDistanceToPlayers);
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowPlayerHealth", false);
+//        p.setComment("Show how much health players have by their name.");
+//        if(loadSettings)
+//        	PlayerLocator.ShowPlayerHealth = p.getBoolean(false);
+//        else
+//        	p.set(PlayerLocator.ShowPlayerHealth);
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMinViewDistance", 0);
+//        p.setComment("Stop showing player names when they are this close (distance measured in blocks).");
+//        if(loadSettings)
+//        	PlayerLocator.viewDistanceCutoff = p.getInt(0);
+//        else
+//        	p.set(PlayerLocator.viewDistanceCutoff);
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWolves", true);
+//        p.setComment("Show your tamed wolves in addition to other players.");
+//        if(loadSettings)
+//        	PlayerLocator.ShowWolves = p.getBoolean(true);
+//        else
+//        	p.set(PlayerLocator.ShowWolves);
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "UseWolfColors", true);
+//        p.setComment("Use the color of your wolf's collar to colorize their name.");
+//        if(loadSettings)
+//        	PlayerLocator.UseWolfColors = p.getBoolean(true);
+//        else
+//        	p.set(PlayerLocator.UseWolfColors);
+//
+//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWitherSkeletons", false);
+//        p.setComment("Show wither skeletons in addition to other players.");
+//        if(loadSettings)
+//        	PlayerLocator.ShowWitherSkeletons = p.getBoolean(false);
+//        else
+//        	p.set(PlayerLocator.ShowWitherSkeletons);
 
 
         //CATEGORY_EATINGAID
-        p = config.get(CATEGORY_EATINGAID, "EnableEatingAid", true);
-        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[3].getKeyCode())
-        			+ " to eat food even if it is  in your inventory and not your hotbar.");
-        if(loadSettings)
-        	EatingAid.Enabled = p.getBoolean(true);
-        else
-        	p.set(EatingAid.Enabled);
-
-        p = config.get(CATEGORY_EATINGAID, "EatGoldenFood", false);
-        p.setComment("Enable/Disable using golden apples and golden carrots as food.");
-        if(loadSettings)
-        	EatingAid.EatGoldenFood = p.getBoolean(false);
-        else
-        	p.set(EatingAid.EatGoldenFood);
-
-        p = config.get(CATEGORY_EATINGAID, "EatRawFood", false);
-        p.setComment("Enable/Disable eating raw chicken, beef, and porkchops.");
-        if(loadSettings)
-        	EatingAid.EatRawFood = p.getBoolean(false);
-        else
-        	p.set(EatingAid.EatRawFood);
-
-        p = config.get(CATEGORY_EATINGAID, "PrioritizeFoodInHotbar", false);
-        p.setComment("Use food that is in your hotbar before looking for food in your main inventory.");
-        if(loadSettings)
-        	EatingAid.PrioritizeFoodInHotbar = p.getBoolean(false);
-        else
-        	p.set(EatingAid.PrioritizeFoodInHotbar);
-
-        p = config.get(CATEGORY_EATINGAID, "EatingAidMode", "INTELLIGENT");
-        p.setComment("Sets the Eating Aid mode.");
-        if(loadSettings)
-        	EatingAid.Mode = EatingAid.Modes.GetMode(p.getString());
-        else
-        	p.set(EatingAid.Mode.name());
-
-        p = config.get(CATEGORY_EATINGAID, "UsePvPSoup", false);
-        p.setComment("If you are connected to a Bukkit server that uses PvP Soup or Fast Soup (mushroom stew) with this enabled, Eating Aid will use it instead of other foods.");
-        if(loadSettings)
-        	EatingAid.UsePvPSoup = p.getBoolean(false);
-        else
-        	p.set(EatingAid.UsePvPSoup);
+//        p = config.get(CATEGORY_EATINGAID, "EnableEatingAid", true);
+//        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[3].getKeyCode())
+//        			+ " to eat food even if it is  in your inventory and not your hotbar.");
+//        if(loadSettings)
+//        	EatingAid.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(EatingAid.Enabled);
+//
+//        p = config.get(CATEGORY_EATINGAID, "EatGoldenFood", false);
+//        p.setComment("Enable/Disable using golden apples and golden carrots as food.");
+//        if(loadSettings)
+//        	EatingAid.EatGoldenFood = p.getBoolean(false);
+//        else
+//        	p.set(EatingAid.EatGoldenFood);
+//
+//        p = config.get(CATEGORY_EATINGAID, "EatRawFood", false);
+//        p.setComment("Enable/Disable eating raw chicken, beef, and porkchops.");
+//        if(loadSettings)
+//        	EatingAid.EatRawFood = p.getBoolean(false);
+//        else
+//        	p.set(EatingAid.EatRawFood);
+//
+//        p = config.get(CATEGORY_EATINGAID, "PrioritizeFoodInHotbar", false);
+//        p.setComment("Use food that is in your hotbar before looking for food in your main inventory.");
+//        if(loadSettings)
+//        	EatingAid.PrioritizeFoodInHotbar = p.getBoolean(false);
+//        else
+//        	p.set(EatingAid.PrioritizeFoodInHotbar);
+//
+//        p = config.get(CATEGORY_EATINGAID, "EatingAidMode", "INTELLIGENT");
+//        p.setComment("Sets the Eating Aid mode.");
+//        if(loadSettings)
+//        	EatingAid.Mode = EatingAid.Modes.GetMode(p.getString());
+//        else
+//        	p.set(EatingAid.Mode.name());
+//
+//        p = config.get(CATEGORY_EATINGAID, "UsePvPSoup", false);
+//        p.setComment("If you are connected to a Bukkit server that uses PvP Soup or Fast Soup (mushroom stew) with this enabled, Eating Aid will use it instead of other foods.");
+//        if(loadSettings)
+//        	EatingAid.UsePvPSoup = p.getBoolean(false);
+//        else
+//        	p.set(EatingAid.UsePvPSoup);
 
 
         //CATEGORY_WEAPONSWAP
-        p = config.get(CATEGORY_WEAPONSWAP, "EnableWeaponSwap", true);
-        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[9].getKeyCode())
-        			+ " to swap between your sword and bow.");
-        if(loadSettings)
-        	WeaponSwapper.Enabled = p.getBoolean(true);
-        else
-        	p.set(WeaponSwapper.Enabled);
+//        p = config.get(CATEGORY_WEAPONSWAP, "EnableWeaponSwap", true);
+//        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[9].getKeyCode())
+//        			+ " to swap between your sword and bow.");
+//        if(loadSettings)
+//        	WeaponSwapper.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(WeaponSwapper.Enabled);
 
         /*
         p = config.get(CATEGORY_WEAPONSWAP, "ScanHotbarForWeaponsFromLeftToRight", true);
@@ -696,13 +696,13 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_ENDERPEARLAID
-        p = config.get(CATEGORY_ENDERPEARLAID, "EnableEnderPearlAid", true);
-        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[4].getKeyCode())
-        			+ " to use an enderpearl even if it is  in your inventory and not your hotbar.");
-        if(loadSettings)
-        	EnderPearlAid.Enabled = p.getBoolean(true);
-        else
-        	p.set(EnderPearlAid.Enabled);
+//        p = config.get(CATEGORY_ENDERPEARLAID, "EnableEnderPearlAid", true);
+//        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[4].getKeyCode())
+//        			+ " to use an enderpearl even if it is  in your inventory and not your hotbar.");
+//        if(loadSettings)
+//        	EnderPearlAid.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(EnderPearlAid.Enabled);
 
 
         //CATEGORY_CLOCK
@@ -723,13 +723,13 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_POTIONAID
-        p = config.get(CATEGORY_POTIONAID, "EnablePotionAid", true);
-        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[6].getKeyCode())
-        			+ " to drink a potion even if it is  in your inventory and not your hotbar.");
-        if(loadSettings)
-        	PotionAid.Enabled = p.getBoolean(true);
-        else
-        	p.set(PotionAid.Enabled);
+//        p = config.get(CATEGORY_POTIONAID, "EnablePotionAid", true);
+//        p.setComment("Enables pressing " + Keyboard.getKeyName(ZyinHUDKeyHandlers.KEY_BINDINGS[6].getKeyCode())
+//        			+ " to drink a potion even if it is  in your inventory and not your hotbar.");
+//        if(loadSettings)
+//        	PotionAid.Enabled = p.getBoolean(true);
+//        else
+//        	p.set(PotionAid.Enabled);
 
 
         //CATEGORY_QUICKDEPOSIT
@@ -871,12 +871,12 @@ public class ZyinHUDConfig
         	p.set(HealthMonitor.GetVolume());
 
         //CATEGORY_TORCHAID
-        p = config.get(CATEGORY_TORCHAID, "EnableTorchAid", false);
-        p.setComment("Enable/Disable using Torch Aid to help you place torches more easily.");
-        if(loadSettings)
-        	TorchAid.Enabled = p.getBoolean(false);
-        else
-        	p.set(TorchAid.Enabled);
+//        p = config.get(CATEGORY_TORCHAID, "EnableTorchAid", false);
+//        p.setComment("Enable/Disable using Torch Aid to help you place torches more easily.");
+//        if(loadSettings)
+//        	TorchAid.Enabled = p.getBoolean(false);
+//        else
+//        	p.set(TorchAid.Enabled);
         
 
         config.save();

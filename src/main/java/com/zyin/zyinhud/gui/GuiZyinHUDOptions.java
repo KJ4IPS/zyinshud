@@ -34,22 +34,22 @@ import com.zyin.zyinhud.mods.AnimalInfo;
 import com.zyin.zyinhud.mods.Clock;
 import com.zyin.zyinhud.mods.Compass;
 import com.zyin.zyinhud.mods.Coordinates;
-import com.zyin.zyinhud.mods.DistanceMeasurer;
+//import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
-import com.zyin.zyinhud.mods.EatingAid;
-import com.zyin.zyinhud.mods.EnderPearlAid;
+//import com.zyin.zyinhud.mods.EatingAid;
+//import com.zyin.zyinhud.mods.EnderPearlAid;
 import com.zyin.zyinhud.mods.Fps;
 import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
 import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
-import com.zyin.zyinhud.mods.PlayerLocator;
-import com.zyin.zyinhud.mods.PotionAid;
+//import com.zyin.zyinhud.mods.PlayerLocator;
+//import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
-import com.zyin.zyinhud.mods.SafeOverlay;
-import com.zyin.zyinhud.mods.TorchAid;
-import com.zyin.zyinhud.mods.WeaponSwapper;
+//import com.zyin.zyinhud.mods.SafeOverlay;
+//import com.zyin.zyinhud.mods.TorchAid;
+//import com.zyin.zyinhud.mods.WeaponSwapper;
 import com.zyin.zyinhud.util.Localization;
 
 /**
@@ -392,31 +392,31 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     }
     private void DrawDistanceMeasurerButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(601, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(DistanceMeasurer.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(602, 0, 0, buttonWidth, buttonHeight, DistanceMeasurerKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 0, new GuiButton(601, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(DistanceMeasurer.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(602, 0, 0, buttonWidth, buttonHeight, DistanceMeasurerKeyHandler.HotkeyDescription));
     	
     }
     private void DrawSafeOverlayButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(701, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(SafeOverlay.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(702, 0, 0, buttonWidth, buttonHeight, SafeOverlayKeyHandler.HotkeyDescription));
-    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(703, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.drawdistance"), SafeOverlay.minDrawDistance, SafeOverlay.maxDrawDistance, SafeOverlay.instance.GetDrawDistance(), SafeOverlay.defaultDrawDistance, GuiNumberSlider.Modes.INTEGER));
-    	AddButtonAt(0, 3, new GuiNumberSliderWithUndo(704, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.transparency"), SafeOverlay.instance.GetUnsafeOverlayMinTransparency(), SafeOverlay.instance.GetUnsafeOverlayMaxTransparency(), SafeOverlay.instance.GetUnsafeOverlayTransparency(), 0.3f, GuiNumberSlider.Modes.PERCENT));
-    	AddButtonAt(0, 4, new GuiButton(705, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether())));
-    	AddButtonAt(0, 5, new GuiButton(706, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls())));
+//    	AddButtonAt(0, 0, new GuiButton(701, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(SafeOverlay.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(702, 0, 0, buttonWidth, buttonHeight, SafeOverlayKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(703, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.drawdistance"), SafeOverlay.minDrawDistance, SafeOverlay.maxDrawDistance, SafeOverlay.instance.GetDrawDistance(), SafeOverlay.defaultDrawDistance, GuiNumberSlider.Modes.INTEGER));
+//    	AddButtonAt(0, 3, new GuiNumberSliderWithUndo(704, 0, 0, buttonWidth, buttonHeight, Localization.get("safeoverlay.options.transparency"), SafeOverlay.instance.GetUnsafeOverlayMinTransparency(), SafeOverlay.instance.GetUnsafeOverlayMaxTransparency(), SafeOverlay.instance.GetUnsafeOverlayTransparency(), 0.3f, GuiNumberSlider.Modes.PERCENT));
+//    	AddButtonAt(0, 4, new GuiButton(705, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether())));
+//    	AddButtonAt(0, 5, new GuiButton(706, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls())));
     	
     }
     private void DrawPlayerLocatorButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(801, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(PlayerLocator.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(802, 0, 0, buttonWidth, buttonHeight, PlayerLocatorKeyHandler.HotkeyDescription));
-    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(803, 0, 0, buttonWidth, buttonHeight, Localization.get("playerlocator.options.minviewdistance"), PlayerLocator.minViewDistanceCutoff, PlayerLocator.maxViewDistanceCutoff, PlayerLocator.viewDistanceCutoff, 0f, GuiNumberSlider.Modes.INTEGER));
-    	AddButtonAt(0, 3, new GuiButton(804, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers)));
-    	AddButtonAt(0, 4, new GuiButton(805, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth)));
-    	
-    	AddButtonAt(1, 0, new GuiButton(808, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons)));
-    	AddButtonAt(1, 1, new GuiButton(806, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves)));
-    	AddButtonAt(1, 2, new GuiButton(807, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors)));
+//    	AddButtonAt(0, 0, new GuiButton(801, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(PlayerLocator.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(802, 0, 0, buttonWidth, buttonHeight, PlayerLocatorKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(803, 0, 0, buttonWidth, buttonHeight, Localization.get("playerlocator.options.minviewdistance"), PlayerLocator.minViewDistanceCutoff, PlayerLocator.maxViewDistanceCutoff, PlayerLocator.viewDistanceCutoff, 0f, GuiNumberSlider.Modes.INTEGER));
+//    	AddButtonAt(0, 3, new GuiButton(804, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers)));
+//    	AddButtonAt(0, 4, new GuiButton(805, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth)));
+//
+//    	AddButtonAt(1, 0, new GuiButton(808, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons)));
+//    	AddButtonAt(1, 1, new GuiButton(806, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves)));
+//    	AddButtonAt(1, 2, new GuiButton(807, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors)));
     	
     }
     private void DrawAnimalInfoButtons()
@@ -465,32 +465,32 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     }
     private void DrawEnderPearlAidButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(1201, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(EnderPearlAid.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(1202, 0, 0, buttonWidth, buttonHeight, EnderPearlAidKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 0, new GuiButton(1201, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(EnderPearlAid.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(1202, 0, 0, buttonWidth, buttonHeight, EnderPearlAidKeyHandler.HotkeyDescription));
     	
     }
     private void DrawEatingAidButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(1301, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(EatingAid.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(1302, 0, 0, buttonWidth, buttonHeight, EatingAidKeyHandler.HotkeyDescription));
-    	AddButtonAt(0, 2, new GuiButton(1303, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Mode(EatingAid.Mode.GetFriendlyName())));
-    	AddButtonAt(0, 3, new GuiButton(1304, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.eatgoldenfood", EatingAid.EatGoldenFood)));
-    	AddButtonAt(0, 4, new GuiButton(1306, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.eatrawfood", EatingAid.EatRawFood)));
-    	AddButtonAt(0, 5, new GuiButton(1305, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.prioritizefoodinhotbar", EatingAid.PrioritizeFoodInHotbar)));
-    	
-    	AddButtonAt(1, 0, new GuiButton(1307, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.usepvpsoup", EatingAid.UsePvPSoup)));
+//    	AddButtonAt(0, 0, new GuiButton(1301, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(EatingAid.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(1302, 0, 0, buttonWidth, buttonHeight, EatingAidKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 2, new GuiButton(1303, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Mode(EatingAid.Mode.GetFriendlyName())));
+//    	AddButtonAt(0, 3, new GuiButton(1304, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.eatgoldenfood", EatingAid.EatGoldenFood)));
+//    	AddButtonAt(0, 4, new GuiButton(1306, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.eatrawfood", EatingAid.EatRawFood)));
+//    	AddButtonAt(0, 5, new GuiButton(1305, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.prioritizefoodinhotbar", EatingAid.PrioritizeFoodInHotbar)));
+//
+//    	AddButtonAt(1, 0, new GuiButton(1307, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("eatingaid.options.usepvpsoup", EatingAid.UsePvPSoup)));
     	
     }
     private void DrawPotionAidButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(1401, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(PotionAid.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(1402, 0, 0, buttonWidth, buttonHeight, PotionAidKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 0, new GuiButton(1401, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(PotionAid.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(1402, 0, 0, buttonWidth, buttonHeight, PotionAidKeyHandler.HotkeyDescription));
     	
     }
     private void DrawWeaponSwapperButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(1501, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(WeaponSwapper.Enabled)));
-    	AddButtonAt(0, 1, new GuiHotkeyButton(1502, 0, 0, buttonWidth, buttonHeight, WeaponSwapperKeyHandler.HotkeyDescription));
+//    	AddButtonAt(0, 0, new GuiButton(1501, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(WeaponSwapper.Enabled)));
+//    	AddButtonAt(0, 1, new GuiHotkeyButton(1502, 0, 0, buttonWidth, buttonHeight, WeaponSwapperKeyHandler.HotkeyDescription));
     	
     }
     private void DrawQuickDepositButtons()
@@ -534,7 +534,7 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     
     private void DrawTorchAidButtons()
     {
-    	AddButtonAt(0, 0, new GuiButton(1901, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(TorchAid.Enabled)));
+//    	AddButtonAt(0, 0, new GuiButton(1901, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(TorchAid.Enabled)));
     	
     }
     
@@ -790,88 +790,88 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            /////////////////////////////////////////////////////////////////////////
 	            // Distance Measurer
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 600:
-	            	screenTitle = Localization.get("distancemeasurer.name");
-	            	DrawDistanceMeasurerButtons();
-	            	break;
-	            case 601:	//Enable/Disable
-	            	DistanceMeasurer.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(DistanceMeasurer.Enabled);
-	            	break;
-	            case 602:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
+//
+//	            case 600:
+//	            	screenTitle = Localization.get("distancemeasurer.name");
+//	            	DrawDistanceMeasurerButtons();
+//	            	break;
+//	            case 601:	//Enable/Disable
+//	            	DistanceMeasurer.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(DistanceMeasurer.Enabled);
+//	            	break;
+//	            case 602:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Safe Overlay
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 700:
-	            	screenTitle = Localization.get("safeoverlay.name");
-	            	DrawSafeOverlayButtons();
-	            	break;
-	            case 701:	//Enable/Disable
-	            	SafeOverlay.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(SafeOverlay.Enabled);
-	            	break;
-	            case 702:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
-	            case 703:	//Draw distance slider
-	            	int value = ((GuiNumberSlider)button).GetValueAsInteger();
-	            	SafeOverlay.instance.SetDrawDistance(value);
-	            	break;
-	            case 704:	//Draw distance slider
-	            	SafeOverlay.instance.SetUnsafeOverlayTransparency(((GuiNumberSlider)button).GetValueAsFloat());
-	            	break;
-	            case 705:	//Show in Nether
-	            	SafeOverlay.instance.ToggleDisplayInNether();
-	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether());
-	            	break;
-	            case 706:	//X-ray
-	            	SafeOverlay.instance.ToggleSeeUnsafePositionsThroughWalls();
-	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
-	            	break;
+//
+//	            case 700:
+//	            	screenTitle = Localization.get("safeoverlay.name");
+//	            	DrawSafeOverlayButtons();
+//	            	break;
+//	            case 701:	//Enable/Disable
+//	            	SafeOverlay.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(SafeOverlay.Enabled);
+//	            	break;
+//	            case 702:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
+//	            case 703:	//Draw distance slider
+//	            	int value = ((GuiNumberSlider)button).GetValueAsInteger();
+//	            	SafeOverlay.instance.SetDrawDistance(value);
+//	            	break;
+//	            case 704:	//Draw distance slider
+//	            	SafeOverlay.instance.SetUnsafeOverlayTransparency(((GuiNumberSlider)button).GetValueAsFloat());
+//	            	break;
+//	            case 705:	//Show in Nether
+//	            	SafeOverlay.instance.ToggleDisplayInNether();
+//	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.displayinnether", SafeOverlay.instance.GetDisplayInNether());
+//	            	break;
+//	            case 706:	//X-ray
+//	            	SafeOverlay.instance.ToggleSeeUnsafePositionsThroughWalls();
+//	            	button.displayString = GetButtonLabel_Boolean("safeoverlay.options.seethroughwalls", SafeOverlay.instance.GetSeeUnsafePositionsThroughWalls());
+//	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Player Locator
 	            /////////////////////////////////////////////////////////////////////////
-	
-	            case 800:
-	            	screenTitle = Localization.get("playerlocator.name");
-	            	DrawPlayerLocatorButtons();
-	            	break;
-	            case 801:	//Enable/Disable
-	            	PlayerLocator.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(PlayerLocator.Enabled);
-	            	break;
-	            case 802:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
-	            case 803:	//Min view distance slider
-	            	PlayerLocator.viewDistanceCutoff = ((GuiNumberSlider)button).GetValueAsInteger();
-	            	break;
-	            case 804:	//Show distance to players
-	            	PlayerLocator.ToggleShowDistanceToPlayers();
-	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers);
-	            	break;
-	            case 805:	//Show players health
-	            	PlayerLocator.ToggleShowPlayerHealth();
-	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth);
-	            	break;
-	            case 806:	//Show tamed wolves
-	            	PlayerLocator.ToggleShowWolves();
-	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves);
-	            	break;
-	            case 807:	//Use wolf colors
-	            	PlayerLocator.ToggleUseWolfColors();
-	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors);
-	            	break;
-	            case 808:	//Show wither skeletons
-	            	PlayerLocator.ToggleShowWitherSkeletons();
-	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons);
-	            	break;
+//
+//	            case 800:
+//	            	screenTitle = Localization.get("playerlocator.name");
+//	            	DrawPlayerLocatorButtons();
+//	            	break;
+//	            case 801:	//Enable/Disable
+//	            	PlayerLocator.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(PlayerLocator.Enabled);
+//	            	break;
+//	            case 802:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
+//	            case 803:	//Min view distance slider
+//	            	PlayerLocator.viewDistanceCutoff = ((GuiNumberSlider)button).GetValueAsInteger();
+//	            	break;
+//	            case 804:	//Show distance to players
+//	            	PlayerLocator.ToggleShowDistanceToPlayers();
+//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers);
+//	            	break;
+//	            case 805:	//Show players health
+//	            	PlayerLocator.ToggleShowPlayerHealth();
+//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth);
+//	            	break;
+//	            case 806:	//Show tamed wolves
+//	            	PlayerLocator.ToggleShowWolves();
+//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves);
+//	            	break;
+//	            case 807:	//Use wolf colors
+//	            	PlayerLocator.ToggleUseWolfColors();
+//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors);
+//	            	break;
+//	            case 808:	//Show wither skeletons
+//	            	PlayerLocator.ToggleShowWitherSkeletons();
+//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons);
+//	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Horse Info
@@ -1015,87 +1015,87 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            /////////////////////////////////////////////////////////////////////////
 	            // Ender Pearl Aid
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 1200:
-	            	screenTitle = Localization.get("enderpearlaid.name");
-	            	DrawEnderPearlAidButtons();
-	            	break;
-	            case 1201:	//Enabled/Disabled
-	            	EnderPearlAid.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(EnderPearlAid.Enabled);
-	            	break;
-	            case 1202:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
+//
+//	            case 1200:
+//	            	screenTitle = Localization.get("enderpearlaid.name");
+//	            	DrawEnderPearlAidButtons();
+//	            	break;
+//	            case 1201:	//Enabled/Disabled
+//	            	EnderPearlAid.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(EnderPearlAid.Enabled);
+//	            	break;
+//	            case 1202:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Eating Aid
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 1300:
-	            	screenTitle = Localization.get("eatingaid.name");
-	            	DrawEatingAidButtons();
-	            	break;
-	            case 1301:	//Enabled/Disabled
-	            	EatingAid.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(EatingAid.Enabled);
-	            	break;
-	            case 1302:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
-	            case 1303:	//Eating Mode
-	            	EatingAid.Modes.ToggleMode(mouseButton == 0);
-	            	button.displayString = GetButtonLabel_Mode(EatingAid.Mode.GetFriendlyName());
-	            	break;
-	            case 1304:	//Eat golden food
-	            	EatingAid.ToggleEatingGoldenFood();
-	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.eatgoldenfood", EatingAid.EatGoldenFood);
-	            	break;
-	            case 1306:	//Eat raw food
-	            	EatingAid.ToggleEatingRawFood();
-	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.eatrawfood", EatingAid.EatRawFood);
-	            	break;
-	            case 1305:	//Prioritize food in hotbar
-	            	EatingAid.TogglePrioritizeFoodInHotbar();
-	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.prioritizefoodinhotbar", EatingAid.PrioritizeFoodInHotbar);
-	            	break;
-	            case 1307:	//Use PvP Soup
-	            	EatingAid.ToggleUsePvPSoup();
-	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.usepvpsoup", EatingAid.UsePvPSoup);
-	            	break;
+//
+//	            case 1300:
+//	            	screenTitle = Localization.get("eatingaid.name");
+//	            	DrawEatingAidButtons();
+//	            	break;
+//	            case 1301:	//Enabled/Disabled
+//	            	EatingAid.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(EatingAid.Enabled);
+//	            	break;
+//	            case 1302:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
+//	            case 1303:	//Eating Mode
+//	            	EatingAid.Modes.ToggleMode(mouseButton == 0);
+//	            	button.displayString = GetButtonLabel_Mode(EatingAid.Mode.GetFriendlyName());
+//	            	break;
+//	            case 1304:	//Eat golden food
+//	            	EatingAid.ToggleEatingGoldenFood();
+//	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.eatgoldenfood", EatingAid.EatGoldenFood);
+//	            	break;
+//	            case 1306:	//Eat raw food
+//	            	EatingAid.ToggleEatingRawFood();
+//	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.eatrawfood", EatingAid.EatRawFood);
+//	            	break;
+//	            case 1305:	//Prioritize food in hotbar
+//	            	EatingAid.TogglePrioritizeFoodInHotbar();
+//	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.prioritizefoodinhotbar", EatingAid.PrioritizeFoodInHotbar);
+//	            	break;
+//	            case 1307:	//Use PvP Soup
+//	            	EatingAid.ToggleUsePvPSoup();
+//	            	button.displayString = GetButtonLabel_Boolean("eatingaid.options.usepvpsoup", EatingAid.UsePvPSoup);
+//	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Potion Aid
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 1400:
-	            	screenTitle = Localization.get("potionaid.name");
-	            	DrawPotionAidButtons();
-	            	break;
-	            case 1401:	//Enabled/Disabled
-	            	PotionAid.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(PotionAid.Enabled);
-	            	break;
-	            case 1402:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
+//
+//	            case 1400:
+//	            	screenTitle = Localization.get("potionaid.name");
+//	            	DrawPotionAidButtons();
+//	            	break;
+//	            case 1401:	//Enabled/Disabled
+//	            	PotionAid.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(PotionAid.Enabled);
+//	            	break;
+//	            case 1402:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
 	            
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Weapon Swapper
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 1500:
-	            	screenTitle = Localization.get("weaponswapper.name");
-	            	DrawWeaponSwapperButtons();
-	            	break;
-	            case 1501:	//Enabled/Disabled
-	            	WeaponSwapper.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(WeaponSwapper.Enabled);
-	            	break;
-	            case 1502:	//Hotkey
-	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-	            	break;
+//
+//	            case 1500:
+//	            	screenTitle = Localization.get("weaponswapper.name");
+//	            	DrawWeaponSwapperButtons();
+//	            	break;
+//	            case 1501:	//Enabled/Disabled
+//	            	WeaponSwapper.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(WeaponSwapper.Enabled);
+//	            	break;
+//	            case 1502:	//Hotkey
+//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+//	            	break;
 	            
 	            
 	            /////////////////////////////////////////////////////////////////////////
@@ -1218,15 +1218,15 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            /////////////////////////////////////////////////////////////////////////
 	            // Torch Aid
 	            /////////////////////////////////////////////////////////////////////////
-	            
-	            case 1900:
-	            	screenTitle = Localization.get("torchaid.name");
-	            	DrawTorchAidButtons();
-	            	break;
-	            case 1901:	//Enable/Disable
-	            	TorchAid.ToggleEnabled();
-	            	button.displayString = GetButtonLabel_Enabled(TorchAid.Enabled);
-	            	break;
+//
+//	            case 1900:
+//	            	screenTitle = Localization.get("torchaid.name");
+//	            	DrawTorchAidButtons();
+//	            	break;
+//	            case 1901:	//Enable/Disable
+//	            	TorchAid.ToggleEnabled();
+//	            	button.displayString = GetButtonLabel_Enabled(TorchAid.Enabled);
+//	            	break;
 	                
 	                
 	            /////////////////////////////////////////////////////////////////////////

@@ -1,6 +1,6 @@
 package com.zyin.zyinhud.keyhandlers;
 
-import com.zyin.zyinhud.mods.EatingAid;
+//import com.zyin.zyinhud.mods.EatingAid;
 
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 
@@ -15,7 +15,7 @@ public class EatingAidKeyHandler implements ZyinHUDKeyHandlerBase
             return;    //don't activate if the user is looking at a GUI
         }
 
-		if (EatingAid.Enabled)
-            EatingAid.instance.Eat();
+//		if (EatingAid.Enabled)
+//            EatingAid.instance.Eat();
 	}
 }

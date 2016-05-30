@@ -16,10 +16,10 @@ public class DistanceMeasurerKeyHandler implements ZyinHUDKeyHandlerBase
             return;    //don't activate if the user is looking at a GUI
         }
         
-        if(DistanceMeasurer.Enabled)
-        {
-        	DistanceMeasurer.Modes.ToggleMode();
-        	ZyinHUDSound.PlayButtonPress();
-        }
+//        if(DistanceMeasurer.Enabled)
+//        {
+//        	DistanceMeasurer.Modes.ToggleMode();
+//        	ZyinHUDSound.PlayButtonPress();
+//        }
 	}
 }

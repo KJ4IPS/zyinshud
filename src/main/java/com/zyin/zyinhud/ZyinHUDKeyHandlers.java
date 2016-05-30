@@ -24,7 +24,7 @@ import com.zyin.zyinhud.keyhandlers.SafeOverlayKeyHandler;
 import com.zyin.zyinhud.keyhandlers.WeaponSwapperKeyHandler;
 import com.zyin.zyinhud.keyhandlers.ZyinHUDOptionsKeyHandler;
 import com.zyin.zyinhud.mods.Miscellaneous;
-import com.zyin.zyinhud.mods.TorchAid;
+//import com.zyin.zyinhud.mods.TorchAid;
 
 public class ZyinHUDKeyHandlers
 {
@@ -194,13 +194,16 @@ public class ZyinHUDKeyHandlers
     	
     	useBlockButtonPreviouslyDown = useBlockButtonDown;
     }
-    private static void OnUseBlockPressed()
-    {
-    	TorchAid.instance.Pressed();
-    }
-    private static void OnUseBlockReleased()
-    {
-    	TorchAid.instance.Released();
-    }
+	//TODO Enable once associated class is functional
+//    private static void OnUseBlockPressed()
+//    {
+//    	TorchAid.instance.Pressed();
+//    }
+
+	//TODO Enable once associated class is functional
+//    private static void OnUseBlockReleased()
+//    {
+//    	TorchAid.instance.Released();
+//    }
     
 }
