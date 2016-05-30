@@ -94,16 +94,18 @@ public class InfoLine extends ZyinHUDModBase
             if (biome.length() > 0)
             	biome += SPACER;
             infoLineMessage += biome;
-            
-            String safe = SafeOverlay.CalculateMessageForInfoLine();
-            if (safe.length() > 0)
-            	safe += SPACER;
-            infoLineMessage += safe;
-            
-            String players = PlayerLocator.CalculateMessageForInfoLine();
-            if (players.length() > 0)
-            	players += SPACER;
-            infoLineMessage += players;
+
+            //TODO Enable once associated class is functional
+//            String safe = SafeOverlay.CalculateMessageForInfoLine();
+//            if (safe.length() > 0)
+//            	safe += SPACER;
+//            infoLineMessage += safe;
+
+            //TODO Enable once associated class is functional
+//            String players = PlayerLocator.CalculateMessageForInfoLine();
+//            if (players.length() > 0)
+//            	players += SPACER;
+//            infoLineMessage += players;
             
             String animals = AnimalInfo.CalculateMessageForInfoLine();
             if (animals.length() > 0)

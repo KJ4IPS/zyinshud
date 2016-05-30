@@ -22,12 +22,12 @@ import org.lwjgl.opengl.GL11;
 import com.zyin.zyinhud.helper.HUDEntityTrackerHelper;
 import com.zyin.zyinhud.helper.RenderEntityTrackerHelper;
 import com.zyin.zyinhud.mods.AnimalInfo;
-import com.zyin.zyinhud.mods.DistanceMeasurer;
+//import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
 import com.zyin.zyinhud.mods.InfoLine;
 import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.PotionTimers;
-import com.zyin.zyinhud.mods.SafeOverlay;
+//import com.zyin.zyinhud.mods.SafeOverlay;
 /**
  * This class is in charge of rendering things onto the HUD and into the game world.
  */
@@ -48,7 +48,7 @@ public class ZyinHUDRenderer
     	if(event.getType() == RenderGameOverlayEvent.ElementType.TEXT)
     	{
     		InfoLine.RenderOntoHUD();
-    		DistanceMeasurer.RenderOntoHUD();
+//    		DistanceMeasurer.RenderOntoHUD(); //TODO Enable after fixing DistanceMeasurer.java
             DurabilityInfo.RenderOntoHUD();
             PotionTimers.RenderOntoHUD();
             HUDEntityTrackerHelper.RenderEntityInfo(event.getPartialTicks());	//calls other mods that need to render things on the HUD near entities
@@ -77,7 +77,8 @@ public class ZyinHUDRenderer
     public void RenderWorldLastEvent(RenderWorldLastEvent event)
     {
         //render unsafe positions (cache calculations are done from this render method)
-        SafeOverlay.instance.RenderAllUnsafePositionsMultithreaded(event.getPartialTicks());
+        //TODO Enable once associated class is functional
+        //SafeOverlay.instance.RenderAllUnsafePositionsMultithreaded(event.getPartialTicks());
     	
         //calls other mods that need to render things in the game world nearby other entities
         RenderEntityTrackerHelper.RenderEntityInfo(event.getPartialTicks());

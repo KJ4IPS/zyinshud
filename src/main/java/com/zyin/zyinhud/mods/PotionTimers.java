@@ -128,7 +128,7 @@ public class PotionTimers extends ZyinHUDModBase
             while (it.hasNext())
             {
                 PotionEffect potionEffect = (PotionEffect)it.next();
-                Potion potion = Potion.potionTypes[potionEffect.getPotionID()];
+                Potion potion = PotionTypes[potionEffect.getPotionID()];
                 Boolean isFromBeacon = potionEffect.getIsAmbient();	//Minecraft bug: this is always false
 
                 if (!isFromBeacon)	//ignore effects from Beacons (Minecraft bug: isFromBeacon is always false)

@@ -1,6 +1,6 @@
 package com.zyin.zyinhud.keyhandlers;
 
-import com.zyin.zyinhud.mods.WeaponSwapper;
+//import com.zyin.zyinhud.mods.WeaponSwapper;
 
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 
@@ -15,7 +15,7 @@ public class WeaponSwapperKeyHandler implements ZyinHUDKeyHandlerBase
             return;    //don't activate if the user is looking at a GUI
         }
 
-        if (WeaponSwapper.Enabled)
-            WeaponSwapper.SwapWeapons();
+//        if (WeaponSwapper.Enabled)
+//            WeaponSwapper.SwapWeapons();
 	}
 }
