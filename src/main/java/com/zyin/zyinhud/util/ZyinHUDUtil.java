@@ -18,7 +18,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.texture.TextureManager;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 //import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 
