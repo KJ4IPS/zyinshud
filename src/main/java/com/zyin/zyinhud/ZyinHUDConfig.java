@@ -11,7 +11,7 @@ import com.zyin.zyinhud.mods.AnimalInfo;
 import com.zyin.zyinhud.mods.Clock;
 import com.zyin.zyinhud.mods.Compass;
 import com.zyin.zyinhud.mods.Coordinates;
-//import com.zyin.zyinhud.mods.DistanceMeasurer;
+import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
 //import com.zyin.zyinhud.mods.EatingAid;
 //import com.zyin.zyinhud.mods.EnderPearlAid;
@@ -234,19 +234,19 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_DISTANCEMEASURER
-//        p = config.get(CATEGORY_DISTANCEMEASURER, "EnableDistanceMeasurer", true);
-//        p.setComment("Enable/Disable the distance measurer.");
-//        if(loadSettings)
-//        	DistanceMeasurer.Enabled = p.getBoolean(true);
-//        else
-//        	p.set(DistanceMeasurer.Enabled);
-//
-//        p = config.get(CATEGORY_DISTANCEMEASURER, "DistanceMeasurerMode", "OFF");
-//        p.setComment("Sets the Distance Measurer mode.");
-//        if(loadSettings)
-//        	DistanceMeasurer.Mode = DistanceMeasurer.Modes.GetMode(p.getString());
-//        else
-//        	p.set(DistanceMeasurer.Mode.name());
+        p = config.get(CATEGORY_DISTANCEMEASURER, "EnableDistanceMeasurer", true);
+        p.setComment("Enable/Disable the distance measurer.");
+        if(loadSettings)
+        	DistanceMeasurer.Enabled = p.getBoolean(true);
+        else
+        	p.set(DistanceMeasurer.Enabled);
+
+        p = config.get(CATEGORY_DISTANCEMEASURER, "DistanceMeasurerMode", "OFF");
+        p.setComment("Sets the Distance Measurer mode.");
+        if(loadSettings)
+        	DistanceMeasurer.Mode = DistanceMeasurer.Modes.GetMode(p.getString());
+        else
+        	p.set(DistanceMeasurer.Mode.name());
 
 
         //CATEGORY_DURABILITYINFO

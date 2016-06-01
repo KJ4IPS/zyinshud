@@ -22,7 +22,7 @@ import org.lwjgl.opengl.GL11;
 import com.zyin.zyinhud.helper.HUDEntityTrackerHelper;
 import com.zyin.zyinhud.helper.RenderEntityTrackerHelper;
 import com.zyin.zyinhud.mods.AnimalInfo;
-//import com.zyin.zyinhud.mods.DistanceMeasurer;
+import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
 import com.zyin.zyinhud.mods.InfoLine;
 //import com.zyin.zyinhud.mods.ItemSelector;
@@ -48,7 +48,7 @@ public class ZyinHUDRenderer
     	if(event.getType() == RenderGameOverlayEvent.ElementType.TEXT)
     	{
     		InfoLine.RenderOntoHUD();
-//    		DistanceMeasurer.RenderOntoHUD(); //TODO Enable after fixing DistanceMeasurer.java
+    		DistanceMeasurer.RenderOntoHUD();
             DurabilityInfo.RenderOntoHUD();
             PotionTimers.RenderOntoHUD();
             HUDEntityTrackerHelper.RenderEntityInfo(event.getPartialTicks());	//calls other mods that need to render things on the HUD near entities
