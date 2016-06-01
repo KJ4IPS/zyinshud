@@ -34,7 +34,7 @@ import com.zyin.zyinhud.mods.AnimalInfo;
 import com.zyin.zyinhud.mods.Clock;
 import com.zyin.zyinhud.mods.Compass;
 import com.zyin.zyinhud.mods.Coordinates;
-//import com.zyin.zyinhud.mods.DistanceMeasurer;
+import com.zyin.zyinhud.mods.DistanceMeasurer;
 import com.zyin.zyinhud.mods.DurabilityInfo;
 //import com.zyin.zyinhud.mods.EatingAid;
 //import com.zyin.zyinhud.mods.EnderPearlAid;
@@ -790,18 +790,18 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            /////////////////////////////////////////////////////////////////////////
 	            // Distance Measurer
 	            /////////////////////////////////////////////////////////////////////////
-//
-//	            case 600:
-//	            	screenTitle = Localization.get("distancemeasurer.name");
-//	            	DrawDistanceMeasurerButtons();
-//	            	break;
-//	            case 601:	//Enable/Disable
-//	            	DistanceMeasurer.ToggleEnabled();
-//	            	button.displayString = GetButtonLabel_Enabled(DistanceMeasurer.Enabled);
-//	            	break;
-//	            case 602:	//Hotkey
-//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-//	            	break;
+
+	            case 600:
+	            	screenTitle = Localization.get("distancemeasurer.name");
+	            	DrawDistanceMeasurerButtons();
+	            	break;
+	            case 601:	//Enable/Disable
+	            	DistanceMeasurer.ToggleEnabled();
+	            	button.displayString = GetButtonLabel_Enabled(DistanceMeasurer.Enabled);
+	            	break;
+	            case 602:	//Hotkey
+	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Safe Overlay
