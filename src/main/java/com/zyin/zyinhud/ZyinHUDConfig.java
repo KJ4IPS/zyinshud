@@ -18,7 +18,7 @@ import com.zyin.zyinhud.mods.DurabilityInfo;
 import com.zyin.zyinhud.mods.Fps;
 import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
-//import com.zyin.zyinhud.mods.ItemSelector;
+import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
 //import com.zyin.zyinhud.mods.PlayerLocator;
 //import com.zyin.zyinhud.mods.PotionAid;
@@ -805,34 +805,34 @@ public class ZyinHUDConfig
         	p.set(QuickDeposit.BlacklistWaterBucket);
 
         //CATEGORY_ITEMSELECTOR
-//        p = config.get(CATEGORY_ITEMSELECTOR, "EnableItemSelector", true);
-//        p.setComment("Enables/Disable using mouse wheel scrolling whilst holding "
-//                + Keyboard.getKeyName( ZyinHUDKeyHandlers.KEY_BINDINGS[11].getKeyCode() ) + " to swap the selected item with an inventory item.");
-//        if(loadSettings)
-//          ItemSelector.Enabled = p.getBoolean(true);
-//        else
-//          p.set(ItemSelector.Enabled);
-//
-//        p = config.get(CATEGORY_ITEMSELECTOR, "ItemSelectorTimeout", ItemSelector.defaultTimeout);
-//        p.setComment("Specifies how many ticks until the item selector confirms your choice and performs the item swap.");
-//        if(loadSettings)
-//          ItemSelector.SetTimeout(p.getInt(ItemSelector.defaultTimeout));
-//        else
-//          p.set(ItemSelector.GetTimeout());
-//
-//        p = config.get(CATEGORY_ITEMSELECTOR, "ItemSelectorMode", "ALL");
-//        p.setComment("Sets the Item Selector mode.");
-//        if(loadSettings)
-//        	ItemSelector.Mode = ItemSelector.Modes.GetMode(p.getString());
-//        else
-//        	p.set(ItemSelector.Mode.name());
-//
-//        p = config.get(CATEGORY_ITEMSELECTOR, "ItemSelectorSideButtons", false);
-//        p.setComment("Enable/disable use of side buttons for item selection.");
-//        if(loadSettings)
-//            ItemSelector.UseMouseSideButtons = p.getBoolean(false);
-//        else
-//            p.set(ItemSelector.UseMouseSideButtons);
+        p = config.get(CATEGORY_ITEMSELECTOR, "EnableItemSelector", true);
+        p.setComment("Enables/Disable using mouse wheel scrolling whilst holding "
+                + Keyboard.getKeyName( ZyinHUDKeyHandlers.KEY_BINDINGS[11].getKeyCode() ) + " to swap the selected item with an inventory item.");
+        if(loadSettings)
+          ItemSelector.Enabled = p.getBoolean(true);
+        else
+          p.set(ItemSelector.Enabled);
+
+        p = config.get(CATEGORY_ITEMSELECTOR, "ItemSelectorTimeout", ItemSelector.defaultTimeout);
+        p.setComment("Specifies how many ticks until the item selector confirms your choice and performs the item swap.");
+        if(loadSettings)
+          ItemSelector.SetTimeout(p.getInt(ItemSelector.defaultTimeout));
+        else
+          p.set(ItemSelector.GetTimeout());
+
+        p = config.get(CATEGORY_ITEMSELECTOR, "ItemSelectorMode", "ALL");
+        p.setComment("Sets the Item Selector mode.");
+        if(loadSettings)
+        	ItemSelector.Mode = ItemSelector.Modes.GetMode(p.getString());
+        else
+        	p.set(ItemSelector.Mode.name());
+
+        p = config.get(CATEGORY_ITEMSELECTOR, "ItemSelectorSideButtons", false);
+        p.setComment("Enable/disable use of side buttons for item selection.");
+        if(loadSettings)
+            ItemSelector.UseMouseSideButtons = p.getBoolean(false);
+        else
+            p.set(ItemSelector.UseMouseSideButtons);
 
         //CATEGORY_HEALTHMONITOR
         p = config.get(CATEGORY_HEALTHMONITOR, "EnableHealthMonitor", false);

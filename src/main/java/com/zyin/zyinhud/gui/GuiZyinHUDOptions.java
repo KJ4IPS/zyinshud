@@ -41,7 +41,7 @@ import com.zyin.zyinhud.mods.DurabilityInfo;
 import com.zyin.zyinhud.mods.Fps;
 import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
-//import com.zyin.zyinhud.mods.ItemSelector;
+import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
 //import com.zyin.zyinhud.mods.PlayerLocator;
 //import com.zyin.zyinhud.mods.PotionAid;
@@ -268,8 +268,8 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
         			"setting, delete it in the configuration",
         			"file at /.minecraft/config/ZyinHUD.cfg",
         			"",
-        			"Found a bug? Want an enhancement? Submit",
-        			"it to my GitHub at github.com/Zyin055/zyinhud"
+        			"Found a bug? Want an enhancement? Submit it",
+        			"to this fork's GitHub at github.com/lowell/zyinshud"
         			};
         	
         	for(int i = 0; i < text.length; i++)
@@ -392,9 +392,9 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     }
     private void DrawDistanceMeasurerButtons()
     {
-//    	AddButtonAt(0, 0, new GuiButton(601, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(DistanceMeasurer.Enabled)));
-//    	AddButtonAt(0, 1, new GuiHotkeyButton(602, 0, 0, buttonWidth, buttonHeight, DistanceMeasurerKeyHandler.HotkeyDescription));
-    	
+    	AddButtonAt(0, 0, new GuiButton(601, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(DistanceMeasurer.Enabled)));
+    	AddButtonAt(0, 1, new GuiHotkeyButton(602, 0, 0, buttonWidth, buttonHeight, DistanceMeasurerKeyHandler.HotkeyDescription));
+
     }
     private void DrawSafeOverlayButtons()
     {
@@ -432,7 +432,7 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     	
     	AddButtonAt(1, 0, new GuiButton(916, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showbreedingicons", AnimalInfo.ShowBreedingIcons)));
     	//AddButtonAt(1, 1, new GuiButton(917, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showbreedingtimers", AnimalInfo.ShowBreedingTimers)));
-    	
+    	// Breeding timer removed in 1.8 - see AnimalInfo.java
     }
     private void DrawPotionTimerButtons()
     {
@@ -512,11 +512,11 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     }
     private void DrawItemSelectorButtons()
     {
-//        AddButtonAt(0, 0, new GuiButton(1701, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(ItemSelector.Enabled)));
-//        AddButtonAt(0, 1, new GuiHotkeyButton(1702, 0, 0, buttonWidth, buttonHeight, ItemSelectorKeyHandler.HotkeyDescription));
-//        AddButtonAt(0, 2, new GuiButton(1704, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Mode(ItemSelector.Mode.GetFriendlyName())));
-//        AddButtonAt(0, 3, new GuiNumberSliderWithUndo(1703, 0, 0, buttonWidth, buttonHeight, Localization.get("itemselector.options.ticks"), ItemSelector.minTimeout, ItemSelector.maxTimeout, ItemSelector.GetTimeout(), 200f, GuiNumberSlider.Modes.INTEGER));
-//        AddButtonAt(0, 4, new GuiButton(1705, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("itemselector.options.sideButtons", ItemSelector.UseMouseSideButtons)));
+        AddButtonAt(0, 0, new GuiButton(1701, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(ItemSelector.Enabled)));
+        AddButtonAt(0, 1, new GuiHotkeyButton(1702, 0, 0, buttonWidth, buttonHeight, ItemSelectorKeyHandler.HotkeyDescription));
+        AddButtonAt(0, 2, new GuiButton(1704, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Mode(ItemSelector.Mode.GetFriendlyName())));
+        AddButtonAt(0, 3, new GuiNumberSliderWithUndo(1703, 0, 0, buttonWidth, buttonHeight, Localization.get("itemselector.options.ticks"), ItemSelector.minTimeout, ItemSelector.maxTimeout, ItemSelector.GetTimeout(), 200f, GuiNumberSlider.Modes.INTEGER));
+        AddButtonAt(0, 4, new GuiButton(1705, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("itemselector.options.sideButtons", ItemSelector.UseMouseSideButtons)));
 
     }
     
@@ -1158,29 +1158,29 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
                 /////////////////////////////////////////////////////////////////////////
                 // Item Selector
                 /////////////////////////////////////////////////////////////////////////
-//                case 1700:
-//                    screenTitle = Localization.get("itemselector.name");
-//                    DrawItemSelectorButtons();
-//                    break;
-//                case 1701:  //Enabled/Disabled
-//                    ItemSelector.ToggleEnabled();
-//                    button.displayString = GetButtonLabel_Enabled(ItemSelector.Enabled);
-//                    break;
-//                case 1702:  //Hotkey
-//                    HotkeyButtonClicked((GuiHotkeyButton)button);
-//                    break;
-//                case 1703:  //Ticks slider
-//                    int itemSelectorTicks = ((GuiNumberSlider)button).GetValueAsInteger();
-//                    ItemSelector.SetTimeout(itemSelectorTicks);
-//                    break;
-//                case 1704:  //Mode
-//                	ItemSelector.Modes.ToggleMode(mouseButton == 0);
-//                    button.displayString = GetButtonLabel_Mode(ItemSelector.Mode.GetFriendlyName());
-//                    break;
-//                case 1705:  //Side buttons
-//                    ItemSelector.ToggleUseMouseSideButtons();
-//                    button.displayString = GetButtonLabel_Boolean("itemselector.options.sideButtons", ItemSelector.UseMouseSideButtons);
-//                    break;
+                case 1700:
+                    screenTitle = Localization.get("itemselector.name");
+                    DrawItemSelectorButtons();
+                    break;
+                case 1701:  //Enabled/Disabled
+                    ItemSelector.ToggleEnabled();
+                    button.displayString = GetButtonLabel_Enabled(ItemSelector.Enabled);
+                    break;
+                case 1702:  //Hotkey
+                    HotkeyButtonClicked((GuiHotkeyButton)button);
+                    break;
+                case 1703:  //Ticks slider
+                    int itemSelectorTicks = ((GuiNumberSlider)button).GetValueAsInteger();
+                    ItemSelector.SetTimeout(itemSelectorTicks);
+                    break;
+                case 1704:  //Mode
+                	ItemSelector.Modes.ToggleMode(mouseButton == 0);
+                    button.displayString = GetButtonLabel_Mode(ItemSelector.Mode.GetFriendlyName());
+                    break;
+                case 1705:  //Side buttons
+                    ItemSelector.ToggleUseMouseSideButtons();
+                    button.displayString = GetButtonLabel_Boolean("itemselector.options.sideButtons", ItemSelector.UseMouseSideButtons);
+                    break;
                 
                 
 	            /////////////////////////////////////////////////////////////////////////
