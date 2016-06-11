@@ -5,14 +5,12 @@ import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.entity.item.EntityBoat;
 import net.minecraft.entity.item.EntityMinecart;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntitySkeleton;
-import net.minecraft.entity.passive.EntityHorse;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.entity.passive.EntityWolf;
+import net.minecraft.entity.passive.*;
 import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
@@ -168,7 +166,7 @@ public class PlayerLocator extends ZyinHUDModBase
         		if(UseWolfColors)
         		{
         			EnumDyeColor collarColor = ((EntityWolf)entity).getCollarColor();
-        			float[] dyeRGBColors = EntitySheep.func_175513_a(collarColor);	//func_175513_a() friendly name is probably "getHexColorsFromDye"
+        			float[] dyeRGBColors = EntitySheep.getDyeRgb(collarColor);	//func_175513_a() friendly name is probably "getHexColorsFromDye"
 
 	                int r = (int)(dyeRGBColors[0]*255);
 	                int g = (int)(dyeRGBColors[1]*255);
@@ -226,17 +224,22 @@ public class PlayerLocator extends ZyinHUDModBase
             //also render whatever the player is currently riding on
             if (entity.getRidingEntity() instanceof EntityHorse)
             {
-            	//armor is 0 when no horse armor is equipped
-            	int armor = ((EntityHorse) entity.getRidingEntity()).getHorseArmorIndexSynced();
-
-            	if(armor == 1)
-                	RenderHorseArmorIronIcon(x, y);
-            	else if(armor == 2)
-                	RenderHorseArmorGoldIcon(x, y);
-            	else if(armor == 3)
-                	RenderHorseArmorDiamondIcon(x, y);
-            	else if(((EntityHorse) entity.getRidingEntity()).isHorseSaddled())
-                	RenderSaddleIcon(x, y);
+                EntityHorse horse = (EntityHorse)entity.getRidingEntity();
+                HorseType armorType = horse.func_184783_dl();
+                switch (armorType) {
+                    case IRON:
+                        RenderHorseArmorIronIcon(x, y);
+                        break;
+                    case GOLD:
+                        RenderHorseArmorGoldIcon(x, y);
+                        break;
+                    case DIAMOND:
+                        RenderHorseArmorDiamondIcon(x, y);
+                        break;
+                    case NONE:
+                        if(horse.isHorseSaddled()) { RenderSaddleIcon(x, y); }
+                        break;
+                }
             }
             if (entity.getRidingEntity() instanceof EntityPig)
             {
@@ -281,7 +284,8 @@ public class PlayerLocator extends ZyinHUDModBase
 
 	private static String GetOverlayMessageForWitherSkeleton(EntitySkeleton witherSkeleton, float distanceFromMe)
 	{
-		String overlayMessage = "Wither " + witherSkeleton.getCommandSenderName();
+		String overlayMessage = "Wither ";// + witherSkeleton.getCommandSenderName();
+        // TODO Investigate getCommandSenderName()'s necessity
 
         //add distance to this wither skeleton into the message
         if (ShowDistanceToPlayers)
