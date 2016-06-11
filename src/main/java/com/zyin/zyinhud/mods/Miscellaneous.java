@@ -14,7 +14,7 @@ import net.minecraftforge.client.event.GuiScreenEvent.DrawScreenEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
-import com.zyin.zyinhud.util.InventoryUtil;
+//import com.zyin.zyinhud.util.InventoryUtil;
 import com.zyin.zyinhud.util.ZyinHUDUtil;
 
 /**
@@ -154,34 +154,34 @@ public class Miscellaneous extends ZyinHUDModBase
 	 */
 	public static void MoveMouseoveredBlockIntoHotbar()
 	{
-        if (mc.objectMouseOver != null && mc.objectMouseOver.typeOfHit == RayTraceResult.Type.BLOCK)
-        {
-            //Block block = ZyinHUDUtil.GetMouseOveredBlock();
-        	BlockPos blockPos = ZyinHUDUtil.GetMouseOveredBlockPos();
-
-            //Item blockItem = Item.getItemFromBlock(block);
-
-    		//first, scan the hotbar to see if the mouseovered block already exists on the hotbar
-            System.out.println("checking hotbar...");
-            int itemIndexInHotbar = InventoryUtil.GetItemIndexFromHotbar(blockPos);
-            System.out.println("returned "+itemIndexInHotbar);
-            if(itemIndexInHotbar > 0)
-            {
-            	//if it does then do nothing since Minecraft takes care of it already
-            }
-            else
-            {
-            	//if it is not on the hotbar, check to see if it is in our inventory
-                System.out.println("checking inventory...");
-            	int itemIndexInInventory = InventoryUtil.GetItemIndexFromInventory(blockPos);
-                System.out.println("returned "+itemIndexInInventory);
-            	if(itemIndexInInventory > 0)
-            	{
-            		//if it is in our inventory, swap it out to the hotbar
-            		InventoryUtil.Swap(InventoryUtil.GetCurrentlySelectedItemInventoryIndex(), itemIndexInInventory);
-            	}
-            }
-        }
+//        if (mc.objectMouseOver != null && mc.objectMouseOver.typeOfHit == RayTraceResult.Type.BLOCK)
+//        {
+//            //Block block = ZyinHUDUtil.GetMouseOveredBlock();
+//        	BlockPos blockPos = ZyinHUDUtil.GetMouseOveredBlockPos();
+//
+//            //Item blockItem = Item.getItemFromBlock(block);
+//
+//    		//first, scan the hotbar to see if the mouseovered block already exists on the hotbar
+//            System.out.println("checking hotbar...");
+//            int itemIndexInHotbar = InventoryUtil.GetItemIndexFromHotbar(blockPos);
+//            System.out.println("returned "+itemIndexInHotbar);
+//            if(itemIndexInHotbar > 0)
+//            {
+//            	//if it does then do nothing since Minecraft takes care of it already
+//            }
+//            else
+//            {
+//            	//if it is not on the hotbar, check to see if it is in our inventory
+//                System.out.println("checking inventory...");
+//            	int itemIndexInInventory = InventoryUtil.GetItemIndexFromInventory(blockPos);
+//                System.out.println("returned "+itemIndexInInventory);
+//            	if(itemIndexInInventory > 0)
+//            	{
+//            		//if it is in our inventory, swap it out to the hotbar
+//            		InventoryUtil.Swap(InventoryUtil.GetCurrentlySelectedItemInventoryIndex(), itemIndexInInventory);
+//            	}
+//            }
+//        }
 	}
 
     @SubscribeEvent
