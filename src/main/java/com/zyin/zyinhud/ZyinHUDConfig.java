@@ -20,7 +20,7 @@ import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
 import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
-//import com.zyin.zyinhud.mods.PlayerLocator;
+import com.zyin.zyinhud.mods.PlayerLocator;
 //import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
@@ -441,61 +441,61 @@ public class ZyinHUDConfig
 
 
         //CATEGORY_PLAYERLOCATOR
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "EnablePlayerLocator", true);
-//        p.setComment("Enable/Disable the Player Locator.");
-//        if(loadSettings)
-//        	PlayerLocator.Enabled = p.getBoolean(true);
-//        else
-//        	p.set(PlayerLocator.Enabled);
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMode", "OFF");
-//        p.setComment("Sets the Player Locator mode.");
-//        if(loadSettings)
-//        	PlayerLocator.Mode = PlayerLocator.Modes.GetMode(p.getString());
-//        else
-//        	p.set(PlayerLocator.Mode.name());
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowDistanceToPlayers", false);
-//        p.setComment("Show how far away you are from the other players next to their name.");
-//        if(loadSettings)
-//        	PlayerLocator.ShowDistanceToPlayers = p.getBoolean(false);
-//        else
-//        	p.set(PlayerLocator.ShowDistanceToPlayers);
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowPlayerHealth", false);
-//        p.setComment("Show how much health players have by their name.");
-//        if(loadSettings)
-//        	PlayerLocator.ShowPlayerHealth = p.getBoolean(false);
-//        else
-//        	p.set(PlayerLocator.ShowPlayerHealth);
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMinViewDistance", 0);
-//        p.setComment("Stop showing player names when they are this close (distance measured in blocks).");
-//        if(loadSettings)
-//        	PlayerLocator.viewDistanceCutoff = p.getInt(0);
-//        else
-//        	p.set(PlayerLocator.viewDistanceCutoff);
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWolves", true);
-//        p.setComment("Show your tamed wolves in addition to other players.");
-//        if(loadSettings)
-//        	PlayerLocator.ShowWolves = p.getBoolean(true);
-//        else
-//        	p.set(PlayerLocator.ShowWolves);
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "UseWolfColors", true);
-//        p.setComment("Use the color of your wolf's collar to colorize their name.");
-//        if(loadSettings)
-//        	PlayerLocator.UseWolfColors = p.getBoolean(true);
-//        else
-//        	p.set(PlayerLocator.UseWolfColors);
-//
-//        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWitherSkeletons", false);
-//        p.setComment("Show wither skeletons in addition to other players.");
-//        if(loadSettings)
-//        	PlayerLocator.ShowWitherSkeletons = p.getBoolean(false);
-//        else
-//        	p.set(PlayerLocator.ShowWitherSkeletons);
+        p = config.get(CATEGORY_PLAYERLOCATOR, "EnablePlayerLocator", true);
+        p.setComment("Enable/Disable the Player Locator.");
+        if(loadSettings)
+        	PlayerLocator.Enabled = p.getBoolean(true);
+        else
+        	p.set(PlayerLocator.Enabled);
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMode", "OFF");
+        p.setComment("Sets the Player Locator mode.");
+        if(loadSettings)
+        	PlayerLocator.Mode = PlayerLocator.Modes.GetMode(p.getString());
+        else
+        	p.set(PlayerLocator.Mode.name());
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowDistanceToPlayers", false);
+        p.setComment("Show how far away you are from the other players next to their name.");
+        if(loadSettings)
+        	PlayerLocator.ShowDistanceToPlayers = p.getBoolean(false);
+        else
+        	p.set(PlayerLocator.ShowDistanceToPlayers);
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowPlayerHealth", false);
+        p.setComment("Show how much health players have by their name.");
+        if(loadSettings)
+        	PlayerLocator.ShowPlayerHealth = p.getBoolean(false);
+        else
+        	p.set(PlayerLocator.ShowPlayerHealth);
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "PlayerLocatorMinViewDistance", 0);
+        p.setComment("Stop showing player names when they are this close (distance measured in blocks).");
+        if(loadSettings)
+        	PlayerLocator.viewDistanceCutoff = p.getInt(0);
+        else
+        	p.set(PlayerLocator.viewDistanceCutoff);
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWolves", true);
+        p.setComment("Show your tamed wolves in addition to other players.");
+        if(loadSettings)
+        	PlayerLocator.ShowWolves = p.getBoolean(true);
+        else
+        	p.set(PlayerLocator.ShowWolves);
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "UseWolfColors", true);
+        p.setComment("Use the color of your wolf's collar to colorize their name.");
+        if(loadSettings)
+        	PlayerLocator.UseWolfColors = p.getBoolean(true);
+        else
+        	p.set(PlayerLocator.UseWolfColors);
+
+        p = config.get(CATEGORY_PLAYERLOCATOR, "ShowWitherSkeletons", false);
+        p.setComment("Show wither skeletons in addition to other players.");
+        if(loadSettings)
+        	PlayerLocator.ShowWitherSkeletons = p.getBoolean(false);
+        else
+        	p.set(PlayerLocator.ShowWitherSkeletons);
 
 
         //CATEGORY_EATINGAID

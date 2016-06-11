@@ -43,7 +43,7 @@ import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
 import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
-//import com.zyin.zyinhud.mods.PlayerLocator;
+import com.zyin.zyinhud.mods.PlayerLocator;
 //import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
