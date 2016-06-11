@@ -43,7 +43,7 @@ import com.zyin.zyinhud.mods.HealthMonitor;
 import com.zyin.zyinhud.mods.InfoLine;
 import com.zyin.zyinhud.mods.ItemSelector;
 import com.zyin.zyinhud.mods.Miscellaneous;
-//import com.zyin.zyinhud.mods.PlayerLocator;
+import com.zyin.zyinhud.mods.PlayerLocator;
 //import com.zyin.zyinhud.mods.PotionAid;
 import com.zyin.zyinhud.mods.PotionTimers;
 import com.zyin.zyinhud.mods.QuickDeposit;
@@ -408,15 +408,15 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     }
     private void DrawPlayerLocatorButtons()
     {
-//    	AddButtonAt(0, 0, new GuiButton(801, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(PlayerLocator.Enabled)));
-//    	AddButtonAt(0, 1, new GuiHotkeyButton(802, 0, 0, buttonWidth, buttonHeight, PlayerLocatorKeyHandler.HotkeyDescription));
-//    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(803, 0, 0, buttonWidth, buttonHeight, Localization.get("playerlocator.options.minviewdistance"), PlayerLocator.minViewDistanceCutoff, PlayerLocator.maxViewDistanceCutoff, PlayerLocator.viewDistanceCutoff, 0f, GuiNumberSlider.Modes.INTEGER));
-//    	AddButtonAt(0, 3, new GuiButton(804, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers)));
-//    	AddButtonAt(0, 4, new GuiButton(805, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth)));
-//
-//    	AddButtonAt(1, 0, new GuiButton(808, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons)));
-//    	AddButtonAt(1, 1, new GuiButton(806, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves)));
-//    	AddButtonAt(1, 2, new GuiButton(807, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors)));
+    	AddButtonAt(0, 0, new GuiButton(801, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Enabled(PlayerLocator.Enabled)));
+    	AddButtonAt(0, 1, new GuiHotkeyButton(802, 0, 0, buttonWidth, buttonHeight, PlayerLocatorKeyHandler.HotkeyDescription));
+    	AddButtonAt(0, 2, new GuiNumberSliderWithUndo(803, 0, 0, buttonWidth, buttonHeight, Localization.get("playerlocator.options.minviewdistance"), PlayerLocator.minViewDistanceCutoff, PlayerLocator.maxViewDistanceCutoff, PlayerLocator.viewDistanceCutoff, 0f, GuiNumberSlider.Modes.INTEGER));
+    	AddButtonAt(0, 3, new GuiButton(804, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers)));
+    	AddButtonAt(0, 4, new GuiButton(805, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth)));
+
+    	AddButtonAt(1, 0, new GuiButton(808, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons)));
+    	AddButtonAt(1, 1, new GuiButton(806, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves)));
+    	AddButtonAt(1, 2, new GuiButton(807, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors)));
     	
     }
     private void DrawAnimalInfoButtons()
@@ -837,41 +837,41 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            /////////////////////////////////////////////////////////////////////////
 	            // Player Locator
 	            /////////////////////////////////////////////////////////////////////////
-//
-//	            case 800:
-//	            	screenTitle = Localization.get("playerlocator.name");
-//	            	DrawPlayerLocatorButtons();
-//	            	break;
-//	            case 801:	//Enable/Disable
-//	            	PlayerLocator.ToggleEnabled();
-//	            	button.displayString = GetButtonLabel_Enabled(PlayerLocator.Enabled);
-//	            	break;
-//	            case 802:	//Hotkey
-//	            	HotkeyButtonClicked((GuiHotkeyButton)button);
-//	            	break;
-//	            case 803:	//Min view distance slider
-//	            	PlayerLocator.viewDistanceCutoff = ((GuiNumberSlider)button).GetValueAsInteger();
-//	            	break;
-//	            case 804:	//Show distance to players
-//	            	PlayerLocator.ToggleShowDistanceToPlayers();
-//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers);
-//	            	break;
-//	            case 805:	//Show players health
-//	            	PlayerLocator.ToggleShowPlayerHealth();
-//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth);
-//	            	break;
-//	            case 806:	//Show tamed wolves
-//	            	PlayerLocator.ToggleShowWolves();
-//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves);
-//	            	break;
-//	            case 807:	//Use wolf colors
-//	            	PlayerLocator.ToggleUseWolfColors();
-//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors);
-//	            	break;
-//	            case 808:	//Show wither skeletons
-//	            	PlayerLocator.ToggleShowWitherSkeletons();
-//	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons);
-//	            	break;
+
+	            case 800:
+	            	screenTitle = Localization.get("playerlocator.name");
+	            	DrawPlayerLocatorButtons();
+	            	break;
+	            case 801:	//Enable/Disable
+	            	PlayerLocator.ToggleEnabled();
+	            	button.displayString = GetButtonLabel_Enabled(PlayerLocator.Enabled);
+	            	break;
+	            case 802:	//Hotkey
+	            	HotkeyButtonClicked((GuiHotkeyButton)button);
+	            	break;
+	            case 803:	//Min view distance slider
+	            	PlayerLocator.viewDistanceCutoff = ((GuiNumberSlider)button).GetValueAsInteger();
+	            	break;
+	            case 804:	//Show distance to players
+	            	PlayerLocator.ToggleShowDistanceToPlayers();
+	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showdistancetoplayers", PlayerLocator.ShowDistanceToPlayers);
+	            	break;
+	            case 805:	//Show players health
+	            	PlayerLocator.ToggleShowPlayerHealth();
+	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showplayerhealth", PlayerLocator.ShowPlayerHealth);
+	            	break;
+	            case 806:	//Show tamed wolves
+	            	PlayerLocator.ToggleShowWolves();
+	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwolves", PlayerLocator.ShowWolves);
+	            	break;
+	            case 807:	//Use wolf colors
+	            	PlayerLocator.ToggleUseWolfColors();
+	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.usewolfcolors", PlayerLocator.UseWolfColors);
+	            	break;
+	            case 808:	//Show wither skeletons
+	            	PlayerLocator.ToggleShowWitherSkeletons();
+	            	button.displayString = GetButtonLabel_Boolean("playerlocator.options.showwitherskeletons", PlayerLocator.ShowWitherSkeletons);
+	            	break;
 	            
 	            /////////////////////////////////////////////////////////////////////////
 	            // Horse Info
