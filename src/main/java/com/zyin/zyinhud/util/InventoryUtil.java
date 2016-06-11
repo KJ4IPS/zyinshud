@@ -6,15 +6,18 @@ import java.util.TimerTask;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.GuiMerchant;
 import net.minecraft.client.gui.inventory.GuiBrewingStand;
 import net.minecraft.client.gui.inventory.GuiFurnace;
 import net.minecraft.client.gui.inventory.GuiScreenHorseInventory;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.village.MerchantRecipe;
 import net.minecraft.village.MerchantRecipeList;
@@ -217,8 +220,16 @@ public class InventoryUtil
 	public static boolean SendUseItem()
 	{
 		//Items need to use the sendUseItem() function to work properly (only works for instant-use items, NOT something like food!)
-		boolean sendUseItem = mc.playerController.sendUseItem((EntityPlayer)mc.thePlayer, (World)mc.theWorld, mc.thePlayer.getHeldItem());
-		return sendUseItem;
+		EntityPlayer player = mc.thePlayer;
+		EnumActionResult sentUseItem = mc.playerController.processRightClick(player, mc.theWorld, player.inventory.getCurrentItem(), player.getActiveHand());
+		switch (sentUseItem) {
+			case FAIL:
+				return false;
+			case PASS:
+			case SUCCESS:
+				return true;
+		}
+		return false;
 	}
 
 	/**
@@ -227,17 +238,16 @@ public class InventoryUtil
 	 */
 	public static boolean SendUseBlock()
 	{
-		//Blocks need to use the onPlayerRightClick() function to work properly
-		//return mc.playerController.onPlayerRightClick(mc.thePlayer, mc.theWorld, mc.thePlayer.getHeldItem(), mc.objectMouseOver.blockX, mc.objectMouseOver.blockY, mc.objectMouseOver.blockZ, mc.objectMouseOver.sideHit, mc.objectMouseOver.hitVec);
-
-		boolean sendUseBlock = mc.playerController.onPlayerRightClick(mc.thePlayer,
-				mc.theWorld,
-				mc.thePlayer.getHeldItem(),
-				new BlockPos(mc.objectMouseOver.hitVec.xCoord, mc.objectMouseOver.hitVec.yCoord, mc.objectMouseOver.hitVec.zCoord),
-				mc.objectMouseOver.sideHit,
-				mc.objectMouseOver.hitVec);
-		BlockPos pos = new BlockPos(mc.objectMouseOver.hitVec.xCoord, mc.objectMouseOver.hitVec.yCoord, mc.objectMouseOver.hitVec.zCoord);
-		return sendUseBlock;
+		EntityPlayer player = mc.thePlayer;
+		EnumActionResult sentUseBlock = mc.playerController.processRightClickBlock((EntityPlayerSP)player, mc.theWorld, player.inventory.getCurrentItem(), new BlockPos(mc.objectMouseOver.hitVec.xCoord, mc.objectMouseOver.hitVec.yCoord, mc.objectMouseOver.hitVec.zCoord), mc.objectMouseOver.sideHit, mc.objectMouseOver.hitVec, player.getActiveHand());
+		switch (sentUseBlock) {
+			case FAIL:
+				return false;
+			case PASS:
+			case SUCCESS:
+				return true;
+		}
+		return false;
 	}
 
 	/**
@@ -1015,8 +1025,8 @@ public class InventoryUtil
 
             		if(Block.getBlockFromItem(itemStack.getItem()) == blockToFind)
             		{
-                		int blockToFindDamage = blockToFind.getDamageValue(mc.theWorld, (BlockPos)object);
-                		int inventoryBlockDamage = itemStack.getItemDamage();
+						int blockToFindDamage = blockToFind.damageDropped(blockToFind.getBlockState().getBaseState());
+						int inventoryBlockDamage = itemStack.getItemDamage();
 
                     	//check to see if their damage value matches (applicable to blocks such as wood planks)
                     	if(blockToFindDamage == inventoryBlockDamage)
@@ -1340,11 +1350,11 @@ public class InventoryUtil
 
         try
         {
-	        mc.playerController.windowClick(
-	        		mc.thePlayer.inventoryContainer.windowId,
-	        		itemIndex,
-	        		(rightClick) ? 1 : 0,
-					(shiftHold) ? 1 : 0,
+			mc.playerController.func_187098_a(
+					mc.thePlayer.inventoryContainer.windowId,
+					itemIndex,
+					(rightClick) ? 1 : 0,
+					(shiftHold) ? ClickType.QUICK_MOVE : ClickType.PICKUP,
 					mc.thePlayer);
         }
         catch (IndexOutOfBoundsException e)
@@ -1369,12 +1379,12 @@ public class InventoryUtil
 
         try
         {
-        	mc.playerController.windowClick(
-        		mc.thePlayer.openContainer.windowId,
-        		itemIndex,
-        		(rightClick) ? 1 : 0,
-				(shiftHold) ? 1 : 0,
-				mc.thePlayer);
+			mc.playerController.func_187098_a(
+				mc.thePlayer.inventoryContainer.windowId,
+					itemIndex,
+					(rightClick) ? 1 : 0,
+					(shiftHold) ? ClickType.QUICK_MOVE : ClickType.PICKUP,
+					mc.thePlayer);
         }
         catch(Exception e)
         {
