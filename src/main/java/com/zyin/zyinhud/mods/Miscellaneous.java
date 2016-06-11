@@ -14,7 +14,7 @@ import net.minecraftforge.client.event.GuiScreenEvent.DrawScreenEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
-//import com.zyin.zyinhud.util.InventoryUtil;
+import com.zyin.zyinhud.util.InventoryUtil;
 import com.zyin.zyinhud.util.ZyinHUDUtil;
 
 /**
