@@ -115,11 +115,11 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     		{900, Localization.get("animalinfo.name"), GetKeyBindingAsString(0)},
     		{1100, Localization.get("durabilityinfo.name"), null},
     		{1000, Localization.get("potiontimers.name"), null},
-    		{1200, Localization.get("enderpearlaid.name"), GetKeyBindingAsString(4)},
-    		{1300, Localization.get("eatingaid.name"), GetKeyBindingAsString(3)},
-    		{1400, Localization.get("potionaid.name"), GetKeyBindingAsString(6)},
-    		{1900, Localization.get("torchaid.name"), null},
-    		{1500, Localization.get("weaponswapper.name"), GetKeyBindingAsString(9)},
+//    		{1200, Localization.get("enderpearlaid.name"), GetKeyBindingAsString(4)},
+//    		{1300, Localization.get("eatingaid.name"), GetKeyBindingAsString(3)},
+//    		{1400, Localization.get("potionaid.name"), GetKeyBindingAsString(6)},
+//    		{1900, Localization.get("torchaid.name"), null},
+//    		{1500, Localization.get("weaponswapper.name"), GetKeyBindingAsString(9)},
     		{1600, Localization.get("quickdeposit.name"), GetKeyBindingAsString(7)},
     		{1700, Localization.get("itemselector.name"), GetKeyBindingAsString(11)},
     		{1800, Localization.get("healthmonitor.name"), null}
@@ -265,8 +265,8 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
         			"v." + ZyinHUD.VERSION,
         			"",
         			"To reset values to their default",
-        			"setting, delete it in the configuration",
-        			"file at /.minecraft/config/ZyinHUD.cfg",
+        			"setting, delete it from the configuration",
+        			"file at (Minecraft folder)/config/ZyinHUD.cfg",
         			"",
         			"Found a bug? Want an enhancement? Submit it",
         			"to this fork's GitHub at github.com/lowell/zyinshud"
@@ -430,7 +430,7 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
     	AddButtonAt(0, 5, new GuiButton(905, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showhorsestatsonf3menu", AnimalInfo.ShowHorseStatsOnF3Menu)));
     	AddButtonAt(0, 6, new GuiButton(906, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showhorsestatsoverlay", AnimalInfo.ShowHorseStatsOverlay)));
     	
-    	AddButtonAt(1, 0, new GuiButton(916, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showbreedingicons", AnimalInfo.ShowBreedingIcons)));
+    	//AddButtonAt(1, 0, new GuiButton(916, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showbreedingicons", AnimalInfo.ShowBreedingIcons)));
     	//AddButtonAt(1, 1, new GuiButton(917, 0, 0, buttonWidth, buttonHeight, GetButtonLabel_Boolean("animalinfo.options.showbreedingtimers", AnimalInfo.ShowBreedingTimers)));
     	// Breeding timer removed in 1.8 - see AnimalInfo.java
     }
@@ -906,11 +906,11 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 	            	AnimalInfo.ToggleShowTextBackgrounds();
 	            	button.displayString = GetButtonLabel_Boolean("animalinfo.options.showtextbackground", AnimalInfo.ShowTextBackgrounds);
 	            	break;
+	            /*
 	            case 916:	//Toggle showing breeding icons
 	            	AnimalInfo.ToggleShowBreedingIcons();
 	            	button.displayString = GetButtonLabel_Boolean("animalinfo.options.showbreedingicons", AnimalInfo.ShowBreedingIcons);
 	            	break;
-	            /*
 	            case 917:	//Toggle showing breeding timers
 	            	AnimalInfo.ToggleShowBreedingTimers();
 	            	button.displayString = GetButtonLabel_Boolean("animalinfo.options.showbreedingtimers", AnimalInfo.ShowBreedingTimers);
@@ -1286,7 +1286,7 @@ public class GuiZyinHUDOptions extends GuiTooltipScreen
 			case 907: return Localization.get("animalinfo.options.showtextbackground.tooltip");
 			case 905: return Localization.get("animalinfo.options.showhorsestatsonf3menu.tooltip");
 			case 906: return Localization.get("animalinfo.options.showhorsestatsoverlay.tooltip");
-			case 916: return Localization.get("animalinfo.options.showbreedingicons.tooltip");
+			//case 916: return Localization.get("animalinfo.options.showbreedingicons.tooltip");
 			//case 917: return Localization.get("animalinfo.options.showbreedingtimers.tooltip");
 			case 1000: return Localization.get("potiontimers.options.tooltip");
 			case 1005: return Localization.get("potiontimers.options.textmode.tooltip");
