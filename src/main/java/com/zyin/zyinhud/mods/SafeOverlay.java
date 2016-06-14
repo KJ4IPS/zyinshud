@@ -46,6 +46,8 @@ import org.lwjgl.opengl.GL11;
 
 import com.zyin.zyinhud.util.Localization;
 import com.zyin.zyinhud.util.ZyinHUDUtil;
+
+import static net.minecraft.block.Block.FULL_BLOCK_AABB;
 //import net.minecraftforge.event.ForgeSubscribe;
 
 /**
@@ -410,7 +412,8 @@ public class SafeOverlay extends ZyinHUDModBase
             {
                 //is there a spawnable block on top of this one?
                 //if so, then render the mark higher up to match its height
-                boundingBoxMaxY = 1 + blockAbove.getBoundingBox(block.getBlockState().getBaseState(), mc.theWorld, new BlockPos(position.x, position.y, position.z)).maxY;
+                boundingBoxMaxY = 1 + FULL_BLOCK_AABB.maxY;
+                //boundingBoxMaxY = 1 + blockAbove.getBoundingBox(block.getBlockState().getBaseState(), mc.theWorld, new BlockPos(position.x, position.y, position.z)).maxY;
             }
             else if (blockAbove instanceof BlockSnow)
             {
